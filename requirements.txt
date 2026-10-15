@@ -1,0 +1,19 @@
+# Python 3.10 이상
+# GPU(CUDA)가 있는 Windows/Linux는 torch를 먼저 따로 설치한다: https://pytorch.org/get-started/locally/
+#   예) pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# Mac(Apple Silicon)은 아래 그대로 설치하면 mps 가속을 쓴다.
+torch>=2.1
+torchvision>=0.16
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+Pillow
+tqdm
+jinja2
+ipywidgets
+jupyter
+ipykernel
+nbformat

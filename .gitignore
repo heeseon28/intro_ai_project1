@@ -1,0 +1,6 @@
+# 리사이즈 캐시와 대용량 체크포인트는 각자 로컬에만 둔다
+cache/
+runs_smoke/
+runs/**/*.pt
+.ipynb_checkpoints/
+.DS_Store
