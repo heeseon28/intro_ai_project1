@@ -104,3 +104,7 @@ python -m unittest discover -s task2_preliminary_seojin/tests -v
 ```
 
 검사 데이터는 임시 폴더의 합성 이미지입니다. 실제 분할 CSV는 읽기만 하며 새 실험 분할을 만들거나 덮어쓰지 않습니다. PowerShell 스크립트는 Linux에서 직접 실행 검증할 수 없으며, 동일한 Python 진입점을 사용합니다.
+
+## Windows 데이터를 GPU 서버로 전송
+
+Windows PC에 CUDA GPU가 없다면 [TRANSFER.md](TRANSFER.md)를 따라 필요한 학습·검증 이미지만 서버로 옮겨 학습할 수 있습니다. transfer_data.py는 100,700장만 묶고 전송 전후 MD5와 분할 일치 여부를 확인합니다.
