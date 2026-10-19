@@ -2,7 +2,7 @@
 No pretrained weights, augmentation, balancing, hierarchy, special loss or LR schedule.
 Test split is checked for metadata overlap, never loaded for model evaluation.
 """
-import argparse, hashlib, json, os, random, re, shutil, subprocess, sys, time, traceback
+import argparse, hashlib, json, math, os, random, re, shutil, subprocess, sys, time, traceback
 from pathlib import Path
 from datetime import datetime, timezone
 import numpy as np
@@ -18,25 +18,11 @@ from torchvision import transforms
 from torchvision.models import resnet18
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 
-HERE=Path(__file__).resolve().parent
-ROOT=HERE.parent
-from preflight import default_data_root, inspect_inputs, save_audit, environment
-from report import write_report
-
+ROOT=Path(__file__).resolve().parent.parent
+PACKAGE=Path(__file__).resolve().parent
 
 def write_json(p,obj):
     tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(obj,indent=2,ensure_ascii=False,allow_nan=False),encoding='utf-8');tmp.replace(p)
-
-def build_config(args):
-    hashes={n:hashlib.sha256((args.split_dir/n).read_bytes()).hexdigest() for n in ('train.csv','val.csv','test.csv','class_info.csv')}
-    return {'architecture':'torchvision ResNet-18','initialization':'random, weights=None','image_size':args.image_size,
-         'batch_size':args.batch_size,'learning_rate':args.lr,'optimizer':'Adam','loss':'unweighted CrossEntropyLoss',
-         'epochs':args.epochs,'seed':args.seed,'normalization':{'mean':[.5]*3,'std':[.5]*3},
-         'resize':'deterministic square resize','augmentation':False,'transfer_learning':False,
-         'rebalancing':False,'hierarchy':False,'scheduler':False,'precision':'float32',
-         'smoke':args.smoke,'readme_conditions_met':not args.smoke and args.batch_size==64,
-         'split_sha256':hashes,'source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-         'support_source_sha256':{name:hashlib.sha256((HERE/name).read_bytes()).hexdigest() for name in ('preflight.py','report.py')}}
 
 def seed_all(seed):
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
@@ -65,15 +51,33 @@ class Cars(Dataset):
         except Exception as e: raise RuntimeError(f'Image decode failed: {p}') from e
         return x,int(r.model_idx)
 
-def read_splits(folder,data,out):
-    audit,classes,records=inspect_inputs(folder,data)
-    save_audit(out,audit,classes)
-    if audit['state']!='ready':
-        raise RuntimeError('; '.join(audit['errors']))
-    ci=pd.DataFrame(classes)
-    ci['model_idx']=ci['model_idx'].astype(int)
-    parts={name:pd.DataFrame(rows) for name,rows in records.items()}
-    for frame in parts.values(): frame['model_idx']=frame['model_idx'].astype(int)
+def read_splits(folder,data):
+    ci=pd.read_csv(folder/'class_info.csv').sort_values('model_idx').reset_index(drop=True)
+    assert ci.model_idx.tolist()==list(range(len(ci)))
+    assert len(ci)==50,'Task 2 requires the existing 50 classes'
+    parts={k:pd.read_csv(folder/f'{k}.csv') for k in ('train','val','test')}
+    for k,d in parts.items():
+        assert not d[['model_idx','make_model','rel_path','md5']].isna().any().any(),k
+        assert d.rel_path.is_unique,k
+        assert set(d.model_idx)==set(ci.model_idx),f'Missing class in {k}'
+        assert np.array_equal(ci.make_model.to_numpy()[d.model_idx.to_numpy(dtype=int)],d.make_model.to_numpy()),k
+        assert d.rel_path.map(lambda p:not Path(p).is_absolute() and '..' not in Path(p).parts).all()
+        assert d.groupby('model_idx').size().reindex(ci.model_idx).tolist()==ci[f'n_{k}'].tolist(),k
+    for a,b in (('train','val'),('train','test'),('val','test')):
+        for col in ('rel_path','md5'):
+            assert not(set(parts[a][col])&set(parts[b][col])),f'Cross-split {col} leakage: {a}/{b}'
+    # Test image content is not opened, and no test performance is measured.
+    available={}
+    for parent in sorted({str(Path(p).parent) for k in ('train','val') for p in parts[k].rel_path}):
+        try:
+            with os.scandir(data/parent) as entries:
+                available[parent]={entry.name for entry in entries if entry.is_file()}
+        except FileNotFoundError: available[parent]=set()
+    for k in ('train','val'):
+        missing=[p for p in parts[k].rel_path if Path(p).name not in available[str(Path(p).parent)]]
+        assert not missing,f'Missing {k} images: {missing[:5]}'
+    for r in parts['train'].sample(n=min(16,len(parts['train'])),random_state=0).itertuples():
+        assert hashlib.md5((data/r.rel_path).read_bytes()).hexdigest()==r.md5,'Dataset differs from split manifest'
     return ci,parts
 
 def make_loader(ds,args,train,epoch=0):
@@ -89,6 +93,7 @@ def metrics(y,p,loss,nclasses):
 
 def epoch_pass(model,loader,criterion,device,nclasses,opt=None,limit=0):
     model.train(opt is not None);total_loss=0.;seen=0;ys=[];ps=[]
+    started=time.monotonic()
     with torch.set_grad_enabled(opt is not None):
         for i,(x,y) in enumerate(loader):
             if limit and i>=limit: break
@@ -99,13 +104,17 @@ def epoch_pass(model,loader,criterion,device,nclasses,opt=None,limit=0):
             if opt is not None: loss.backward();opt.step()
             total_loss+=float(loss.detach().cpu())*len(y);seen+=len(y)
             ys.extend(y.detach().cpu().tolist());ps.extend(z.detach().argmax(1).cpu().tolist())
-            if opt is not None and i%100==0: print(f'  batch {i+1}/{len(loader)}, loss={float(loss.detach().cpu()):.4f}',flush=True)
+            if i%25==0:
+                elapsed=time.monotonic()-started
+                phase='train' if opt is not None else 'eval'
+                print(f'  {phase} batch {i+1}/{len(loader)}, loss={float(loss.detach().cpu()):.4f}, '
+                      f'images/s={seen/max(elapsed,1e-9):.2f}, elapsed_min={elapsed/60:.1f}',flush=True)
     m,per=metrics(ys,np.array(ps),total_loss/seen,nclasses)
     return m,per,np.array(ys),np.array(ps)
 
 def plot_curves(history,out):
     df=pd.DataFrame(history);df.to_csv(out/'history.csv',index=False)
-    fig,axes=plt.subplots(1,3,figsize=(13,3.5))
+    fig,axes=plt.subplots(1,3,figsize=(13,3.3))
     for ax,key in zip(axes,('loss','accuracy','macro_f1')):
         ax.plot(df.epoch,df['train_'+key],label='Train (during updates)')
         ax.plot(df.epoch,df['val_'+key],label='Validation')
@@ -126,7 +135,7 @@ def final_artifacts(model,train,val,args,ci,out,history):
     pr,rc,f1,sup=per
     table=ci[['model_idx','make_model']].copy();table['precision']=pr;table['recall']=rc;table['f1']=f1;table['support']=sup
     table.to_csv(out/'per_class_metrics.csv',index=False)
-    table.sort_values(['recall','f1','model_idx'],kind='stable').head(10).to_csv(out/'difficult_classes.csv',index=False)
+    table.sort_values('recall').head(10).to_csv(out/'difficult_classes.csv',index=False)
     predictions=val.df[['rel_path','model_idx','make_model']].copy()
     predictions['prediction_idx']=p;predictions['prediction_label']=ci.make_model.to_numpy()[p]
     predictions['correct']=y==p;predictions.to_csv(out/'validation_predictions.csv',index=False)
@@ -142,7 +151,7 @@ def final_artifacts(model,train,val,args,ci,out,history):
     best=max(history,key=lambda r:r['val_macro_f1'])
     summary={'complete':True,'smoke_test_only':args.smoke,'selected_by':'maximum validation macro-F1',
         'best_epoch':int(best['epoch']),'epochs_completed':len(history),'train_at_best_checkpoint':final_train,
-        'validation_at_best_checkpoint':vm,'test_evaluated':False,'readme_conditions_met':not args.smoke and args.batch_size==64}
+        'validation_at_best_checkpoint':vm,'test_evaluated':False}
     write_json(out/'metrics.json',summary)
     lines=['# Task 2 result facts','',f'Smoke test only: {args.smoke}',
            f'Best epoch: {best["epoch"]}; completed epochs: {len(history)}',
@@ -154,53 +163,58 @@ def final_artifacts(model,train,val,args,ci,out,history):
            'Exact duplicates checked from stored MD5; near-duplicates and all manifest hashes were not re-audited.',
            'Future improvements must use these same data splits and control the baseline settings.']
     (out/'report_facts.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    write_report(out,summary,history,args,table)
     print('FINAL_METRICS',json.dumps(summary),flush=True)
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--data-root',type=Path,default=Path(default_data_root()))
+    ap.add_argument('--data-root',type=Path,default=ROOT.parent/'VMMRdb')
     ap.add_argument('--split-dir',type=Path,default=ROOT/'splits')
-    ap.add_argument('--run-name',default='baseline_seed0_seojin')
-    ap.add_argument('--output-dir',type=Path,default=HERE/'results')
-    ap.add_argument('--batch-size',type=int,default=64)
-    ap.set_defaults(epochs=12,image_size=224,lr=3e-4,seed=0)
-    ap.add_argument('--workers',type=int,default=0 if os.name=='nt' else 2)
+    ap.add_argument('--run-name',default='baseline_seed0')
+    ap.add_argument('--epochs',type=int,default=12);ap.add_argument('--batch-size',type=int,default=64)
+    ap.add_argument('--image-size',type=int,default=224);ap.add_argument('--lr',type=float,default=3e-4)
+    ap.add_argument('--seed',type=int,default=0);ap.add_argument('--workers',type=int,default=0)
+    ap.add_argument('--threads',type=int,default=4)
+    ap.add_argument('--output-root',type=Path,default=PACKAGE/'results')
     ap.add_argument('--device',choices=('auto','cuda','mps','cpu'),default='auto')
     ap.add_argument('--resume',action='store_true');ap.add_argument('--smoke',action='store_true')
-    args=ap.parse_args()
-    if not re.fullmatch(r'[A-Za-z0-9_-]+',args.run_name): ap.error('Invalid run name')
-    if args.batch_size<2 or args.workers<0: ap.error('batch-size must be >=2 and workers >=0')
+    args=ap.parse_args();assert re.fullmatch(r'[A-Za-z0-9_-]+',args.run_name),'Invalid run name'
+    assert args.epochs>0 and args.batch_size>1 and args.workers>=0 and args.threads>0
+    if not args.smoke and (args.epochs,args.image_size,args.lr,args.seed)!=(12,224,3e-4,0):
+        ap.error('Task 2 requires exactly 12 epochs, image size 224, Adam lr=0.0003 and seed 0.')
+    if not args.smoke and args.batch_size not in (32,64):
+        ap.error('Use batch size 64 (or documented memory fallback 32).')
     if args.device=='auto': args.device='cuda' if torch.cuda.is_available() else ('mps' if torch.backends.mps.is_available() else 'cpu')
     if args.smoke: args.epochs=1;args.batch_size=8;args.workers=0
-    args.split_dir=args.split_dir.expanduser().resolve()
-    cfg=build_config(args)
-    out=args.output_dir.expanduser().resolve()/(args.run_name+('_smoke' if args.smoke else ''))
-    if out.exists() and any(out.iterdir()) and not args.resume: raise RuntimeError(f'Results already exist: {out}. Use --resume or a new --run-name.')
-    if args.resume and not (out/'status.json').exists(): raise RuntimeError('No existing run to resume')
-    if args.resume:
-        if (out/'config.json').exists() and json.loads((out/'config.json').read_text(encoding='utf-8'))!=cfg:
-            raise RuntimeError('Resume configuration, split, or source changed; existing results were preserved')
-        if (out/'history.csv').exists() and not (out/'checkpoints'/'last.pt').exists():
-            raise RuntimeError('Resume checkpoint is missing; use a new run name to start again')
+    out=args.output_root.expanduser().resolve()/(args.run_name+('_smoke' if args.smoke else ''))
+    if (out/'config.json').exists() and not args.resume: raise RuntimeError(f'Results already exist: {out}. Use --resume or a new --run-name.')
     out.mkdir(parents=True,exist_ok=True)
     original_stdout,original_stderr=sys.stdout,sys.stderr
     log=(out/'run.log').open('a',buffering=1,encoding='utf-8');sys.stdout=Tee(sys.stdout,log);sys.stderr=Tee(sys.stderr,log)
     try:
-        torch.set_num_threads(2);seed_all(args.seed)
+        torch.set_num_threads(args.threads);seed_all(args.seed)
         torch.backends.cudnn.benchmark=False;torch.backends.cudnn.deterministic=True
-        ci,parts=read_splits(args.split_dir,args.data_root,out)
-        args.data_root=args.data_root.expanduser().resolve()
-        if not (out/'config.json').exists(): write_json(out/'config.json',cfg)
+        args.data_root=args.data_root.expanduser().resolve();args.split_dir=args.split_dir.expanduser().resolve()
+        ci,parts=read_splits(args.split_dir,args.data_root)
+        hashes={n:hashlib.sha256((args.split_dir/n).read_bytes()).hexdigest() for n in ('train.csv','val.csv','test.csv','class_info.csv')}
+        cfg={'architecture':'torchvision ResNet-18','initialization':'random, weights=None','image_size':args.image_size,
+             'batch_size':args.batch_size,'learning_rate':args.lr,'optimizer':'Adam','loss':'unweighted CrossEntropyLoss',
+             'epochs':args.epochs,'seed':args.seed,'normalization':{'mean':[.5]*3,'std':[.5]*3},
+             'resize':'deterministic square resize','augmentation':False,'transfer_learning':False,
+             'rebalancing':False,'hierarchy':False,'scheduler':False,'precision':'float32',
+             'smoke':args.smoke,'split_sha256':hashes,'source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+        if args.batch_size==32: cfg['batch_size_reason']='README memory fallback: batch size 32 selected explicitly'
+        if (out/'config.json').exists(): assert json.loads((out/'config.json').read_text(encoding='utf-8'))==cfg,'Resume configuration or source changed'
+        else: write_json(out/'config.json',cfg)
         ci.to_csv(out/'class_info.csv',index=False);shutil.copy2(__file__,out/'train_source.py')
-        for name in ('preflight.py','report.py','dataset_paths.json'): shutil.copy2(HERE/name,out/name)
         sizes={k:len(d) for k,d in parts.items()}
-        try: revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+        write_json(out/'data_audit.json',{'split_sizes':sizes,'nclasses':len(ci),'cross_split_stored_md5_overlap':False,
+                   'train_hashes_verified':16,'test_images_opened':False,'near_duplicates_checked':False})
+        try: revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
         except Exception: revision='unavailable'
-        write_json(out/'environment.json',{**environment(),'python':sys.version,'torch':str(torch.__version__),
+        write_json(out/'environment.json',{'python':sys.version,'torch':str(torch.__version__),
                    'device':args.device,'gpu':torch.cuda.get_device_name(0) if args.device=='cuda' else None,
-                   'workers':args.workers,'data_root':str(args.data_root),'git_revision':revision,
-                   'package_imports_verified':True,'started_utc':datetime.now(timezone.utc).isoformat()})
+                   'workers':args.workers,'cpu_threads':args.threads,'data_root':str(args.data_root),'git_revision':revision,
+                   'started_utc':datetime.now(timezone.utc).isoformat()})
         if args.smoke:
             parts={k:d.groupby('model_idx',group_keys=False).sample(n=2 if k=='train' else 1,random_state=0).reset_index(drop=True)
                    for k,d in parts.items() if k!='test'}
@@ -217,7 +231,6 @@ def main():
             print('RESUME at epoch',first+1,flush=True)
         write_json(out/'status.json',{'state':'running','smoke':args.smoke})
         print('TASK2_BASELINE_START',cfg,'sizes',sizes,flush=True)
-        if args.batch_size!=64 and not args.smoke: print('WARNING: batch size differs from the README baseline; this is recorded in config.json.')
         for epoch in range(first,args.epochs):
             seed_all(args.seed+epoch);start=time.monotonic()
             tm,*_=epoch_pass(model,make_loader(train,args,True,epoch),criterion,args.device,len(ci),opt,limit=2 if args.smoke else 0)
@@ -233,15 +246,15 @@ def main():
             print('EPOCH_RESULT',json.dumps(row),flush=True)
         model.load_state_dict(torch.load(ckdir/'best.pt',map_location=args.device,weights_only=True))
         final_artifacts(model,train,val,args,ci,out,history)
+        from report import generate_report
+        generate_report(out)
         write_json(out/'status.json',{'state':'complete','smoke':args.smoke,'updated_utc':datetime.now(timezone.utc).isoformat()})
+        from verify_results import verify_run
+        verification=verify_run(out)
+        if not verification['passed']: raise RuntimeError(f"Result verification failed: {verification['errors']}")
         print('TASK2_COMPLETE',out,flush=True)
     except BaseException as e:
-        state='failed'
-        if (out/'data_audit.json').exists():
-            audit_state=json.loads((out/'data_audit.json').read_text(encoding='utf-8'))['state']
-            if audit_state!='ready': state=audit_state
-        write_json(out/'status.json',{'state':state,'smoke':args.smoke,'error':repr(e),
-                                    'updated_utc':datetime.now(timezone.utc).isoformat()})
+        write_json(out/'status.json',{'state':'failed','error':repr(e)})
         traceback.print_exc();raise
     finally:
         sys.stdout,sys.stderr=original_stdout,original_stderr

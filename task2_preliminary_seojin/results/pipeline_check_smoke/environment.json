@@ -1,0 +1,11 @@
+{
+  "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "gpu": null,
+  "workers": 0,
+  "cpu_threads": 4,
+  "data_root": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\VMMRdb",
+  "git_revision": "8df66be3af9e2e83b1cc5500ddee74809df32936",
+  "started_utc": "2026-10-19T14:03:01.662169+00:00"
+}

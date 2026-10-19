@@ -1,0 +1,11 @@
+model_idx,make_model,precision,recall,f1,support
+0,ford/mustang,0.0,0.0,0.0,1
+1,ford/f150,0.0,0.0,0.0,1
+2,ford/explorer,0.0,0.0,0.0,1
+3,ford/taurus,0.0,0.0,0.0,1
+4,ford/focus,0.0,0.0,0.0,1
+5,chevrolet/silverado,0.0,0.0,0.0,1
+6,chevrolet/impala,0.0,0.0,0.0,1
+7,chevrolet/corvette,0.0,0.0,0.0,1
+9,chevrolet/malibu,0.0,0.0,0.0,1
+10,toyota/camry,0.0,0.0,0.0,1

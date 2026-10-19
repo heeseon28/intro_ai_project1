@@ -1,200 +1,450 @@
 {
-  "created_utc": "2026-10-19T12:18:58.456634+00:00",
-  "split_dir": "/home/work/workspace/intro_ai_project1/splits",
-  "data_root_requested": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\VMMRdb",
-  "state": "blocked_missing_data",
-  "errors": [
-    "Windows C: drive is not mounted in this Linux environment. Run on Windows or pass --data-root with a mounted path."
-  ],
-  "split_sha256": {
-    "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
-    "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b",
-    "test.csv": "91b55d4bf14dfb6d11cb355e1c765db3cf7fab0c5b8fd67e2da4c716ed38dd55",
-    "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c"
-  },
+  "preflight_only": true,
   "test_images_opened": false,
-  "test_evaluated": false,
+  "test_performance_measured": false,
+  "splits_regenerated": false,
   "near_duplicates_checked": false,
-  "train_hashes_verified": 0,
-  "nclasses": 50,
+  "all_image_hashes_verified": false,
+  "errors": [],
+  "warnings": [],
+  "split_sha256": {
+    "class_info.csv": "216621a0d10565a758bc71956cae74bd04eca10d775c44c139efb4197b6deab1",
+    "train.csv": "91b23e44305458c3085326f22d5830dadfea45623f60ab046d288ed39074d135",
+    "val.csv": "9a12c73621df32d67de06378f6ac779b46c13b91d9fe859de0460f20669d0b06",
+    "test.csv": "0e50f285472a7102ec03c81a49516e09ea682a661a10b133138c24d85bb2b159"
+  },
   "split_sizes": {
     "train": 82929,
     "val": 17771,
     "test": 17771
   },
-  "class_counts": {
+  "nclasses": 50,
+  "metadata": {
     "train": {
-      "0": 4032,
-      "1": 3501,
-      "2": 3417,
-      "3": 2310,
-      "4": 2141,
-      "5": 3676,
-      "6": 2752,
-      "7": 2076,
-      "8": 1814,
-      "9": 1516,
-      "10": 3709,
-      "11": 2567,
-      "12": 1315,
-      "13": 1303,
-      "14": 1106,
-      "15": 4805,
-      "16": 4509,
-      "17": 2161,
-      "18": 1204,
-      "19": 669,
-      "20": 3527,
-      "21": 2216,
-      "22": 1634,
-      "23": 955,
-      "24": 925,
-      "25": 2069,
-      "26": 1632,
-      "27": 1046,
-      "28": 867,
-      "29": 783,
-      "30": 2460,
-      "31": 1275,
-      "32": 753,
-      "33": 529,
-      "34": 330,
-      "35": 2320,
-      "36": 1056,
-      "37": 1035,
-      "38": 775,
-      "39": 184,
-      "40": 760,
-      "41": 727,
-      "42": 594,
-      "43": 319,
-      "44": 277,
-      "45": 1124,
-      "46": 1010,
-      "47": 692,
-      "48": 251,
-      "49": 221
+      "row_issue_counts": {},
+      "issue_examples": [],
+      "duplicate_path_rows": 0,
+      "duplicate_md5_rows": 0,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
     },
     "val": {
-      "0": 864,
-      "1": 750,
-      "2": 733,
-      "3": 495,
-      "4": 459,
-      "5": 787,
-      "6": 590,
-      "7": 445,
-      "8": 389,
-      "9": 325,
-      "10": 794,
-      "11": 550,
-      "12": 282,
-      "13": 279,
-      "14": 237,
-      "15": 1030,
-      "16": 967,
-      "17": 463,
-      "18": 258,
-      "19": 143,
-      "20": 755,
-      "21": 475,
-      "22": 350,
-      "23": 205,
-      "24": 198,
-      "25": 443,
-      "26": 350,
-      "27": 224,
-      "28": 186,
-      "29": 168,
-      "30": 527,
-      "31": 273,
-      "32": 162,
-      "33": 113,
-      "34": 71,
-      "35": 497,
-      "36": 226,
-      "37": 222,
-      "38": 166,
-      "39": 40,
-      "40": 163,
-      "41": 156,
-      "42": 127,
-      "43": 68,
-      "44": 59,
-      "45": 241,
-      "46": 217,
-      "47": 148,
-      "48": 54,
-      "49": 47
+      "row_issue_counts": {},
+      "issue_examples": [],
+      "duplicate_path_rows": 0,
+      "duplicate_md5_rows": 0,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
     },
     "test": {
-      "0": 864,
-      "1": 750,
-      "2": 732,
-      "3": 495,
-      "4": 458,
-      "5": 788,
-      "6": 590,
-      "7": 445,
-      "8": 388,
-      "9": 325,
-      "10": 795,
-      "11": 550,
-      "12": 282,
-      "13": 279,
-      "14": 237,
-      "15": 1030,
-      "16": 966,
-      "17": 463,
-      "18": 258,
-      "19": 144,
-      "20": 756,
-      "21": 474,
-      "22": 350,
-      "23": 204,
-      "24": 199,
-      "25": 443,
-      "26": 350,
-      "27": 224,
-      "28": 186,
-      "29": 168,
-      "30": 528,
-      "31": 273,
-      "32": 161,
-      "33": 113,
-      "34": 71,
-      "35": 497,
-      "36": 227,
-      "37": 222,
-      "38": 166,
-      "39": 39,
-      "40": 163,
-      "41": 156,
-      "42": 127,
-      "43": 69,
-      "44": 59,
-      "45": 240,
-      "46": 216,
-      "47": 149,
-      "48": 54,
-      "49": 48
+      "row_issue_counts": {},
+      "issue_examples": [],
+      "duplicate_path_rows": 0,
+      "duplicate_md5_rows": 0,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
     }
   },
   "cross_split_overlap": {
     "train/val": {
-      "rel_path": 0,
-      "md5": 0
+      "rel_path": {
+        "count": 0,
+        "examples": []
+      },
+      "md5": {
+        "count": 0,
+        "examples": []
+      }
     },
     "train/test": {
-      "rel_path": 0,
-      "md5": 0
+      "rel_path": {
+        "count": 0,
+        "examples": []
+      },
+      "md5": {
+        "count": 0,
+        "examples": []
+      }
     },
     "val/test": {
-      "rel_path": 0,
-      "md5": 0
+      "rel_path": {
+        "count": 0,
+        "examples": []
+      },
+      "md5": {
+        "count": 0,
+        "examples": []
+      }
     }
   },
-  "manifest_checks_passed": true,
-  "data_root_accessible": false,
-  "image_existence_checked": false
+  "metadata_valid": true,
+  "image_availability": {
+    "data_root_accessible": true,
+    "directories_enumerated": 1373,
+    "images_checked": {
+      "train": 82929,
+      "val": 17771
+    },
+    "missing_counts": {
+      "train": 0,
+      "val": 0
+    },
+    "first_missing_examples": [],
+    "access_errors": [],
+    "test_image_existence_checked": false
+  },
+  "sampled_train_images": {
+    "sampling_seed": 0,
+    "requested": 16,
+    "sampled": 16,
+    "hashes_verified": 16,
+    "decoded": 16,
+    "pillow_available": true,
+    "samples": [
+      {
+        "rel_path": "honda_pilot_2009/01313_InoTw9MkzP_600x450.jpg",
+        "expected_md5": "342941a1c07963cfb6447a0b98f2e9d4",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "342941a1c07963cfb6447a0b98f2e9d4",
+        "image_size": [
+          600,
+          337
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "nissan_maxima_2002/00Z0Z_2SLUBM9c5lY_600x450.jpg",
+        "expected_md5": "9db4f0fde02fe6607c0219494c6f3995",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "9db4f0fde02fe6607c0219494c6f3995",
+        "image_size": [
+          600,
+          337
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "ford_f150_2000/ford_f150_2000_39.jpg",
+        "expected_md5": "75acca2f47ee62991630ef3405826726",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "75acca2f47ee62991630ef3405826726",
+        "image_size": [
+          388,
+          288
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "toyota_4runner_1997/toyota_4runner_1997_29.jpg",
+        "expected_md5": "83ed7f9ee782a51393eba620ccfe50ea",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "83ed7f9ee782a51393eba620ccfe50ea",
+        "image_size": [
+          412,
+          308
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "volkswagen_jetta_2002/2002 VW Jetta_00P0P_aqmB2M93vCQ_600x450.jpg",
+        "expected_md5": "de5d9c1f827d1845500851f87a1d3d4b",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "de5d9c1f827d1845500851f87a1d3d4b",
+        "image_size": [
+          450,
+          450
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "dodge_ram_1500_1997/1997 dodge ram 1500_00z0z_2V9pej17o6O_600x450.jpg",
+        "expected_md5": "e23d7821e1a3a22262fd9ce2e769ce59",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "e23d7821e1a3a22262fd9ce2e769ce59",
+        "image_size": [
+          480,
+          320
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "nissan_altima_2008/00I0I_82VwxJ4b6d2_600x450.jpg",
+        "expected_md5": "9a7275d074bca8477317719dcaa5480d",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "9a7275d074bca8477317719dcaa5480d",
+        "image_size": [
+          600,
+          450
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "honda_civic_2003/00505_czeKai2Diwo_600x450.jpg",
+        "expected_md5": "9969bf6c2642620d83fb5a7be5ae451c",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "9969bf6c2642620d83fb5a7be5ae451c",
+        "image_size": [
+          600,
+          337
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "dodge_durango_2000/dodge_durango_2000_55.jpg",
+        "expected_md5": "bd39d24164e2e57bd9f3eb39995cd9cb",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "bd39d24164e2e57bd9f3eb39995cd9cb",
+        "image_size": [
+          588,
+          440
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "honda_odyssey_2001/00w0w_4l04pHLmCcu_600x450.jpg",
+        "expected_md5": "1b0ef72e237ffec1b70862da30ef272a",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "1b0ef72e237ffec1b70862da30ef272a",
+        "image_size": [
+          600,
+          450
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "jeep_cherokee_1999/jeep_cherokee_1999_18.jpg",
+        "expected_md5": "537b08680b81620b6e2553bc06a5f36d",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "537b08680b81620b6e2553bc06a5f36d",
+        "image_size": [
+          412,
+          308
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "toyota_camry_2000/toyota_camry_2000_99.jpg",
+        "expected_md5": "9bdca1b8b0eaa0c76fba28282accd96a",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "9bdca1b8b0eaa0c76fba28282accd96a",
+        "image_size": [
+          388,
+          288
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "dodge_charger_2012/00b0b_9aC6u3zCCOZ_600x450.jpg",
+        "expected_md5": "b48a1557db153903cbd7b9e0a697865c",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "b48a1557db153903cbd7b9e0a697865c",
+        "image_size": [
+          337,
+          450
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "chevrolet_silverado_2007/chevrolet_silverado_2007_23.jpg",
+        "expected_md5": "c0eea86c2ab4a4a56ddabb4496ca1568",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "c0eea86c2ab4a4a56ddabb4496ca1568",
+        "image_size": [
+          332,
+          252
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "toyota_tacoma_2008/2008 Toyota Tacoma_00N0N_1UksBLkGhtr_600x450.jpg",
+        "expected_md5": "ea903883d2aeff596b14a84f916d714b",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "ea903883d2aeff596b14a84f916d714b",
+        "image_size": [
+          600,
+          337
+        ],
+        "image_mode": "RGB"
+      },
+      {
+        "rel_path": "chevrolet_silverado_2008/2008 1500 chevy_00t0t_28I4MPqeV9M_600x450.jpg",
+        "expected_md5": "e267f57f8a2bacb27c3593e163cdd09a",
+        "hash_verified": true,
+        "decoded": true,
+        "actual_md5": "e267f57f8a2bacb27c3593e163cdd09a",
+        "image_size": [
+          411,
+          450
+        ],
+        "image_mode": "RGB"
+      }
+    ]
+  },
+  "ready_for_training": true,
+  "runtime_seconds": 8.875
 }

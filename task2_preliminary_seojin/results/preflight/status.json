@@ -1,7 +1,10 @@
 {
-  "state": "blocked_missing_data",
-  "training_started": false,
-  "training_results_available": false,
-  "test_evaluated": false,
-  "updated_utc": "2026-10-19T12:19:00.243475+00:00"
+  "state": "ready",
+  "preflight_complete": true,
+  "ready_for_training": true,
+  "error_count": 0,
+  "warning_count": 0,
+  "runtime_seconds": 8.875,
+  "started_utc": "2026-10-19T14:01:18.391858+00:00",
+  "finished_utc": "2026-10-19T14:01:27.266040+00:00"
 }

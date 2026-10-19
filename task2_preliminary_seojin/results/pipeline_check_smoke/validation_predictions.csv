@@ -1,0 +1,51 @@
+rel_path,model_idx,make_model,prediction_idx,prediction_label,correct
+ford_mustang_1967/1967 Ford mustang_00S0S_ehbjg8pBz75_600x450.jpg,0,ford/mustang,8,chevrolet/tahoe,False
+ford_f150_1979/ford_f150_1979_7.jpg,1,ford/f150,8,chevrolet/tahoe,False
+ford_explorer_2004/ford_explorer_2004_258.jpg,2,ford/explorer,8,chevrolet/tahoe,False
+ford_taurus_2004/ford_taurus_2004_17.jpg,3,ford/taurus,8,chevrolet/tahoe,False
+ford_focus_2002/ford_focus_2002_8.jpg,4,ford/focus,8,chevrolet/tahoe,False
+chevrolet_silverado_1998/chevrolet_silverado_1998_15.jpg,5,chevrolet/silverado,8,chevrolet/tahoe,False
+chevrolet_impala_2009/2009 Chevrolet Impala_00N0N_gnKEy36aRG0_600x450.jpg,6,chevrolet/impala,8,chevrolet/tahoe,False
+chevrolet_corvette_1985/chevrolet_corvette_1985_19.jpg,7,chevrolet/corvette,8,chevrolet/tahoe,False
+chevrolet_tahoe_2008/chevrolet_tahoe_2008_3.jpg,8,chevrolet/tahoe,8,chevrolet/tahoe,True
+chevrolet_malibu_2004/chevrolet_malibu_2004_56.jpg,9,chevrolet/malibu,8,chevrolet/tahoe,False
+toyota_camry_1995/toyota_camry_1995_60.jpg,10,toyota/camry,8,chevrolet/tahoe,False
+toyota_corolla_2001/00F0F_eNwCkKpXurP_600x450.jpg,11,toyota/corolla,8,chevrolet/tahoe,False
+toyota_4runner_2015/2015 Toyota 4Runner_00Q0Q_4xr73AiK8cM_600x450.jpg,12,toyota/4runner,8,chevrolet/tahoe,False
+toyota_sienna_2001/2001 Toyota Sienna_00Q0Q_dMG7TKmNkLM_600x450.jpg,13,toyota/sienna,8,chevrolet/tahoe,False
+toyota_tacoma_2001/2001 toyota tacoma_01414_1eGoajy8hu5_600x450.jpg,14,toyota/tacoma,8,chevrolet/tahoe,False
+honda_civic_1997/honda_civic_1997_89.jpg,15,honda/civic,8,chevrolet/tahoe,False
+honda_accord_2006/honda_accord_2006_17.jpg,16,honda/accord,8,chevrolet/tahoe,False
+honda_odyssey_2002/honda_odyssey_2002_45.jpg,17,honda/odyssey,8,chevrolet/tahoe,False
+honda_cr-v_2006/00l0l_ieUzWcOOg5X_600x450.jpg,18,honda/cr-v,8,chevrolet/tahoe,False
+honda_pilot_2006/2006 honda pilot_00808_64L7WuMbfFb_600x450.jpg,19,honda/pilot,8,chevrolet/tahoe,False
+nissan_altima_2003/nissan_altima_2003_174.jpg,20,nissan/altima,8,chevrolet/tahoe,False
+nissan_maxima_2002/00W0W_35fRyT3CKl4_600x450.jpg,21,nissan/maxima,8,chevrolet/tahoe,False
+nissan_sentra_1991/00O0O_hSlE0F1ZHPs_600x450.jpg,22,nissan/sentra,8,chevrolet/tahoe,False
+nissan_pathfinder_1995/00v0v_fXh1jOv9qRC_600x450.jpg,23,nissan/pathfinder,8,chevrolet/tahoe,False
+nissan_quest_1998/nissan_quest_1998_7.jpg,24,nissan/quest,8,chevrolet/tahoe,False
+dodge_grand caravan_2005/2005 Dodge Grand Caravan_00B0B_bOZ2Sg99EMQ_600x450.jpg,25,dodge/grand caravan,8,chevrolet/tahoe,False
+dodge_durango_2002/00N0N_jgLSwsAMQCB_600x450.jpg,26,dodge/durango,8,chevrolet/tahoe,False
+dodge_ram_1500_2006/2006 Dodge Ram_00T0T_jiFTMjRL4l9_600x450.jpg,27,dodge/ram_1500,8,chevrolet/tahoe,False
+dodge_ram_2500_2001/2001 Dodge ram 2500_00M0M_8PotPqqqCo_600x450.jpg,28,dodge/ram_2500,8,chevrolet/tahoe,False
+dodge_charger_2010/01212_1oFGAHzlAZo_600x450.jpg,29,dodge/charger,8,chevrolet/tahoe,False
+volkswagen_jetta_2001/01414_5MRRhc2D4c8_600x450.jpg,30,volkswagen/jetta,8,chevrolet/tahoe,False
+volkswagen_passat_2001/2001 Volkswagen Passat_00K0K_lUEUAfao7VJ_600x450.jpg,31,volkswagen/passat,8,chevrolet/tahoe,False
+volkswagen_beetle_2003/2003 Volkswagen Beetle_00k0k_aWpeXZTtF0r_600x450.jpg,32,volkswagen/beetle,8,chevrolet/tahoe,False
+volkswagen_gti_1996/00j0j_3xLcNdYd4kf_600x450.jpg,33,volkswagen/gti,8,chevrolet/tahoe,False
+volkswagen_golf_2000/2000 volkswagen golf TDI_00c0c_2JUKzZz0gos_600x450.jpg,34,volkswagen/golf,8,chevrolet/tahoe,False
+jeep_grand_cherokee_1998/jeep_grandcherokee_1998_108.jpg,35,jeep/grand_cherokee,8,chevrolet/tahoe,False
+jeep_liberty_2011/2011 jeep liberty_00u0u_hRMLl7W4iSG_600x450.jpg,36,jeep/liberty,8,chevrolet/tahoe,False
+jeep_wrangler_2003/2003 jeep wrangler_00h0h_9z15I4MLtP7_600x450.jpg,37,jeep/wrangler,8,chevrolet/tahoe,False
+jeep_cherokee_1994/jeep_cherokee_1994_20.jpg,38,jeep/cherokee,8,chevrolet/tahoe,False
+jeep_patriot_2007/2007 Jeep Patriot_00q0q_gWzVw01sFGH_600x450.jpg,39,jeep/patriot,8,chevrolet/tahoe,False
+bmw_325i_1993/bmw_325i_1993_6.jpg,40,bmw/325i,8,chevrolet/tahoe,False
+bmw_x5_2009/00606_hx4Novwab66_600x450.jpg,41,bmw/x5,8,chevrolet/tahoe,False
+bmw_328i_2010/bmw_328i_2010_1.jpg,42,bmw/328i,8,chevrolet/tahoe,False
+bmw_528i_2009/bmw_528i_2009_8.jpg,43,bmw/528i,8,chevrolet/tahoe,False
+bmw_530i_2005/2005 bmw 530i_00505_4AqyOpxFQTH_600x450.jpg,44,bmw/530i,8,chevrolet/tahoe,False
+gmc_sierra_1500_2003/2003 gmc seirra Z71_00303_7PJgVffPBBB_600x450.jpg,45,gmc/sierra_1500,8,chevrolet/tahoe,False
+gmc_yukon_1500_2000/00r0r_5zB5xzkPZq5_600x450.jpg,46,gmc/yukon_1500,8,chevrolet/tahoe,False
+gmc_envoy_2002/00B0B_lacP4rwQHhe_600x450.jpg,47,gmc/envoy,8,chevrolet/tahoe,False
+gmc_jimmy_1998/gmc_jimmy_1998_35.jpg,48,gmc/jimmy,8,chevrolet/tahoe,False
+gmc_acadia_2008/2008 gmc acadia_00404_g6kp5zUcvlv_600x450.jpg,49,gmc/acadia,8,chevrolet/tahoe,False

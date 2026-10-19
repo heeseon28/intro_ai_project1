@@ -1,0 +1,433 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-19T14:05:32.123026+00:00",
+  "run_dir": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\task2_preliminary_seojin\\results\\pipeline_check_smoke",
+  "smoke_test_only": true,
+  "checks_passed": 83,
+  "checks_total": 83,
+  "recomputed_validation": {
+    "samples": 50,
+    "accuracy": 0.02,
+    "macro_f1": 0.000784313725490196,
+    "balanced_accuracy": 0.02
+  },
+  "errors": [],
+  "checks": [
+    {
+      "name": "read config.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read status.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read metrics.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read data_audit.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke flag is boolean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "run status is complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metrics are complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke flags agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test was not evaluated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test images were not opened",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stored MD5 has no cross-split overlap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "configured epoch count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "completed epoch count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "checkpoint selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "saved training source SHA256",
+      "passed": true,
+      "detail": "6ab2295c86441e4ce54382cb8734b46b95af56360752e643b50caef404b3796a"
+    },
+    {
+      "name": "split SHA256 recorded: train.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: val.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: test.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: class_info.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read class_info.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read validation_predictions.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read per_class_metrics.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read confusion_matrix_counts.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read history.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exactly 50 class indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "class names are unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit class count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prediction row count",
+      "passed": true,
+      "detail": "actual=50, expected=50"
+    },
+    {
+      "name": "prediction paths are nonempty and unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "valid prediction indices: model_idx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "valid prediction indices: prediction_idx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "true class labels match indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "predicted labels match indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "saved correctness flags",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all validation classes represented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke contains one example per class",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed validation accuracy",
+      "passed": true,
+      "detail": "recorded=0.02; recomputed=0.02"
+    },
+    {
+      "name": "recomputed validation macro_f1",
+      "passed": true,
+      "detail": "recorded=0.000784313725490196; recomputed=0.000784313725490196"
+    },
+    {
+      "name": "recomputed validation balanced_accuracy",
+      "passed": true,
+      "detail": "recorded=0.02; recomputed=0.02"
+    },
+    {
+      "name": "per-class row indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "per-class names",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class precision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class recall",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class support",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix row labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix column labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed full confusion matrix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "history epoch sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "earliest maximum macro-F1 selected",
+      "passed": true,
+      "detail": "recorded=1; expected=1"
+    },
+    {
+      "name": "frozen validation matches selected epoch: loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: checkpoints/best.pt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: checkpoints/last.pt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: report_facts.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: report.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: run.log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report contains finalized evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke report is explicitly marked",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "scope": "Saved-artifact consistency only; no checkpoint inference or test image evaluation."
+}

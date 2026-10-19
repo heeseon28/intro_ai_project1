@@ -1,15 +1,20 @@
 {
-  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
-  "platform": "Linux-5.4.0-124-generic-x86_64-with-glibc2.39",
+  "started_utc": "2026-10-19T14:01:18.391858+00:00",
+  "python_executable": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\.venv-project-runner\\Scripts\\python.exe",
+  "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "data_root": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\VMMRdb",
+  "compcar_root": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\CompCar",
+  "split_dir": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\splits",
+  "git_revision": "8df66be3af9e2e83b1cc5500ddee74809df32936",
   "packages": {
-    "torch": "2.8.0a0+5228986c39.nv25.5",
-    "torchvision": "0.22.0a0",
-    "numpy": "1.26.4",
-    "pandas": "2.2.3",
-    "Pillow": "11.2.1",
-    "matplotlib": "3.10.3",
-    "scikit-learn": "1.6.1"
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6"
   },
-  "dependencies_present": true,
-  "package_imports_verified": false
+  "torch_imported": false,
+  "cuda_probe": "Not probed here; training records the selected device.",
+  "compcar_required_for_task2": false
 }
