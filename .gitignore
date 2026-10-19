@@ -4,3 +4,6 @@ runs_smoke/
 runs/**/*.pt
 .ipynb_checkpoints/
 .DS_Store
+
+# Local datasets (archives and extracted images)
+/dataset/
