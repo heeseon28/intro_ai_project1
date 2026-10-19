@@ -1,0 +1,38 @@
+{
+  "architecture": "torchvision ResNet-18",
+  "initialization": "random, weights=None",
+  "image_size": 224,
+  "batch_size": 64,
+  "learning_rate": 0.0003,
+  "optimizer": "Adam",
+  "loss": "unweighted CrossEntropyLoss",
+  "epochs": 12,
+  "seed": 0,
+  "normalization": {
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "resize": "deterministic square resize",
+  "augmentation": false,
+  "transfer_learning": false,
+  "rebalancing": false,
+  "hierarchy": false,
+  "scheduler": false,
+  "precision": "float32",
+  "smoke": false,
+  "split_sha256": {
+    "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
+    "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b",
+    "test.csv": "91b55d4bf14dfb6d11cb355e1c765db3cf7fab0c5b8fd67e2da4c716ed38dd55",
+    "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c"
+  },
+  "source_sha256": "24dd9787d566ef2bbd7d2152ed259d8d3049080aa224e3e52318b95e3f8617f2"
+}
