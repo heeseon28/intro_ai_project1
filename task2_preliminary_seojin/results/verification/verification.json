@@ -1,0 +1,19 @@
+{
+  "state": "passed",
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "duration_seconds": 32.87,
+  "checked_utc": "2026-10-19T12:29:40.878275+00:00",
+  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+  "platform": "Linux-5.4.0-124-generic-x86_64-with-glibc2.39",
+  "real_dataset_training_executed": false,
+  "synthetic_images_used": true,
+  "powershell_runtime_tested": false,
+  "source_sha256": {
+    "preflight.py": "8af7d4b5c2977a4078649099f0ad8c041c02869d7a0ebdf410a80ea188f7c3db",
+    "report.py": "98c6cb0e1356c712c4ec0ad7b3bba550776648b50032c28c389cbc9b81f6b16b",
+    "tests/test_pipeline.py": "eb629d2a1dcd5efdaf002146e72740f126409588c1a4b6dbbd8204eb8d9ac15d",
+    "train_baseline.py": "c2e7243cfb3df9440d091c325328a091ff5c83d8b46e0efad1ececa58bd06281"
+  }
+}
