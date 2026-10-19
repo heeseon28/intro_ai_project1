@@ -1,0 +1,5 @@
+# Keep reports, CSVs, PNGs, JSONs and logs in Git. Keep large training states local.
+**/checkpoints/
+**/*_smoke/
+**/*.tmp
+**/__pycache__/

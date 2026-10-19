@@ -7,3 +7,9 @@ runs/**/*.pt
 
 # Local datasets (archives and extracted images)
 /dataset/
+
+/outputs/automation/
+
+/.venv-project-runner/
+
+/runs_pilot/
