@@ -1,0 +1,11 @@
+Synthetic fixtures verify program behavior only; no VMMRdb training metrics are produced.
+test_cross_split_hash_leakage_rejected (test_pipeline.ManifestTests.test_cross_split_hash_leakage_rejected) ... ok
+test_real_manifest_audit_records_blocked_data_without_metrics (test_pipeline.ManifestTests.test_real_manifest_audit_records_blocked_data_without_metrics) ... ok
+test_test_images_not_needed_and_training_hash_mismatch_detected (test_pipeline.ManifestTests.test_test_images_not_needed_and_training_hash_mismatch_detected) ... ok
+test_unsafe_manifest_paths_rejected_on_all_platforms (test_pipeline.ManifestTests.test_unsafe_manifest_paths_rejected_on_all_platforms) ... ok
+test_smoke_artifacts_metrics_resume_and_overwrite_protection (test_pipeline.PipelineTests.test_smoke_artifacts_metrics_resume_and_overwrite_protection) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 32.857s
+
+OK

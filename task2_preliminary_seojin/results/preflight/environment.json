@@ -1,0 +1,15 @@
+{
+  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+  "platform": "Linux-5.4.0-124-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.8.0a0+5228986c39.nv25.5",
+    "torchvision": "0.22.0a0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "Pillow": "11.2.1",
+    "matplotlib": "3.10.3",
+    "scikit-learn": "1.6.1"
+  },
+  "dependencies_present": true,
+  "package_imports_verified": false
+}

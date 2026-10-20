@@ -1,0 +1,10 @@
+{
+  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+  "torch": "2.8.0a0+5228986c39.nv25.05",
+  "device": "cuda",
+  "gpu": "CUDA GPU",
+  "workers": 2,
+  "data_root": "/home/work/AI/VMMRdb",
+  "git_revision": "3f51c4615840a5fa4bb0792a7f3fa17f58053cdb",
+  "started_utc": "2026-10-19T01:41:37.723993+00:00"
+}

@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.venv/
+results/**/checkpoints/
+results/*_smoke/
+results/**/.*.tmp
