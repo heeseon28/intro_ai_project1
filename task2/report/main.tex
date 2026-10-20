@@ -73,7 +73,7 @@ Optimizer & Adam, learning rate $3\times10^{-4}$, no weight decay, no LR schedul
 Loss & standard (unweighted) cross-entropy \\
 Not used & augmentation, transfer learning, re-weighting/sampling, special losses \\
 Checkpoint & epoch with the highest validation macro-F1 \\
-Reproducibility & seed 0, FP32, deterministic cuDNN (bit-exact only on the same hardware) \\
+Reproducibility & seed 0, FP32, deterministic cuDNN (no bit-exact guarantee) \\
 Hardware & run A: GPU slice, 3.1\,min/epoch; run B: CPU, 106\,min/epoch \\
 \bottomrule
 \end{tabularx}
@@ -111,17 +111,17 @@ updates; the dotted line marks run A's minimum validation loss (epoch 5).}\label
 
 \hl{Q1: How well does the baseline classify the dataset?} About three of four validation images are classified
 correctly (chance: 2\%), but macro-F1 is 3.6\,pp below accuracy and per-class F1 ranges from 0.39 to 0.93 (median 0.77):
-performance is uneven across classes. The result is \hl{reproducible}: the two runs differ by 0.1\,pp in accuracy and
-0.2\,pp in macro-F1, and their per-class F1 scores correlate at 0.92, so this baseline is a stable reference for later comparisons.
+performance is uneven across classes. The two runs give \hl{similar results}: they differ by 0.1\,pp in accuracy and
+0.2\,pp in macro-F1, and their per-class F1 scores correlate at 0.92 (both used seed 0; seed variation is measured next).
 
 \hl{Overfitting, not underfitting.} Training accuracy reaches 96.4\% while validation accuracy is 77.0\%
 (\hl{19.3\,pp gap}; run B: 18.4\,pp). In run A the validation loss stops improving after epoch 5 (0.94) and then
-oscillates between 0.94 and 1.13, while the training loss keeps falling to 0.10 (Fig.~\ref{fig:curves}). The model fits
-the training set far better than unseen images; it is not underfitting, since training accuracy is near 100\%.
-Validation performance is also \hl{unstable without an LR schedule}: in run B, validation accuracy drops from 74.1\% to
-66.4\% between epochs 7 and 8, and from 77.1\% (epoch 10) to 73.6\% at the last epoch. Longer training alone is therefore
-unlikely to help, and the checkpoint must be chosen on the validation set. This choice makes the validation numbers slightly
-optimistic, which is why the untouched test set is kept for the final, unbiased comparison.
+oscillates between 0.94 and 1.13, while the training loss keeps falling to 0.10 (Fig.~\ref{fig:curves}). The model is
+overfitting, not underfitting, since training accuracy is near 100\%.
+With the fixed learning rate, validation performance also \hl{fluctuates between epochs}: in run B, validation accuracy
+drops from 74.1\% to 66.4\% between epochs 7 and 8, and from 77.1\% (epoch 10) to 73.6\% at the last epoch. Whether an LR
+schedule reduces this will be tested next. Longer training alone is unlikely to close the gap, and the checkpoint has to be chosen on the
+validation set; this makes validation numbers slightly optimistic, so the untouched test set is kept for the final comparison.
 
 % ------------------------------------------------------------------ 4
 \begin{figure*}[t]
@@ -157,7 +157,7 @@ Jeep Cherokee    &   775 & 0.53 & Grand Cherokee (16\%) \\
 \end{table}
 
 \hl{Q2: Which classes or images are difficult?} (Fig.~\ref{fig:cm}, Table~\ref{tab:hard}, Fig.~\ref{fig:err}).
-The same classes are hardest in both runs (328i, Ram 1500, Sierra, Golf, Cherokee and Ram 2500 are in both bottom-six lists).
+Both runs share five of their six lowest-F1 classes.
 \begin{itemize}
   \item \hl{Look-alike pairs dominate the hardest classes}, as predicted in Activity~1:
   badge-engineered twins (Sierra$\rightarrow$Silverado 27\%), size variants of one truck (Ram 1500$\leftrightarrow$2500),
@@ -168,13 +168,14 @@ The same classes are hardest in both runs (328i, Ram 1500, Sierra, Golf, Cheroke
   (Silverado$\rightarrow$Ram 1500, Corvette$\rightarrow$Mustang, Altima$\rightarrow$Accord). This suggests that the
   scratch-trained CNN relies mainly on the global silhouette rather than on small make cues such as emblems and grilles
   (to be checked with Grad-CAM in the next activity).
-  \item \hl{Visual distinctiveness matters more than class size.} Larger classes tend to score higher
+  \item \hl{Class size alone does not explain the differences.} Larger classes tend to score higher
   (correlation of $\log n_\text{train}$ with F1: 0.44), and small classes are weak (528i 0.50, Golf 0.52, Patriot 0.65).
-  But the two worst classes have over 1,000 training images, while the best ones have unique shapes
-  (Odyssey 0.93, Grand Caravan 0.92, Beetle 0.91).
-  \item \hl{Difficult images: old and rare generations.} Merging years mixes several generations in one class.
-  Validation accuracy is 59.5\% for cars built before 1990, 72.3\% for the 1990s, and 81.1\% for the 2000s
-  (the dominant decade), but drops to 68.2\% from 2010. Classic cars are often mistaken for other classics
+  But the two worst classes have over 1,000 training images, while the best ones have distinctive shapes
+  (Odyssey 0.93, Grand Caravan 0.92, Beetle 0.91), so visual similarity also appears to play a role.
+  \item \hl{Difficult images: older and less common model years.} Merging years mixes several generations in one class.
+  Validation accuracy is 59.5\% before 1990 ($n{=}739$), 72.3\% in the 1990s ($n{=}3{,}795$), 81.1\% in the 2000s
+  ($n{=}11{,}447$, the dominant decade) and 68.2\% from 2010 ($n{=}1{,}790$). The decades differ in class mix as well,
+  so this is not a pure effect of model year. Classic cars are often mistaken for other classics
   (1960s Mustang$\rightarrow$Impala, 1963 Corvette$\rightarrow$Mustang; Fig.~\ref{fig:err}).
 \end{itemize}
 
@@ -184,16 +185,16 @@ The same classes are hardest in both runs (328i, Ram 1500, Sierra, Golf, Cheroke
 \begin{enumerate}[leftmargin=1.4em]
   \item \hl{Reduce overfitting} (19.3\,pp gap): data augmentation (random crop, flip, colour jitter),
   weight decay, and a learning-rate schedule with early stopping on validation macro-F1.
-  \item \hl{Transfer learning}: ImageNet-pre-trained weights should provide generic shape and part features
-  that 82k images cannot teach from scratch. As a reference upper bound, a separate run on the same splits with pre-training,
-  augmentation, AdamW and a cosine schedule reached $94.2\pm0.1\%$ validation accuracy over 3 seeds. Because it changes several
-  factors at once, it does not isolate the effect of pre-training; the controlled one-change experiments above will.
-  \item \hl{Use the class hierarchy} (our Activity~1 hypotheses): since 73\% of errors cross makes, a make- or body-type-level
-  first stage could remove many of them in the scratch setting. We will check whether this gain survives with pre-training.
+  \item \hl{Transfer learning}: ImageNet-pre-trained features may generalize better than features learned from 82k
+  images alone. For reference, a separate improved setting on the same splits (pre-training, augmentation, AdamW and a cosine
+  schedule) reached $94.2\pm0.1\%$ validation accuracy over 3 seeds. Because it changes several factors at once, it does not
+  isolate the effect of pre-training; the controlled one-change experiments above will.
+  \item \hl{Use the class hierarchy} (our Activity~1 hypotheses): 73\% of errors cross makes, so a make- or body-type-level
+  first stage could help if it predicts the group reliably. Since predicting the make may itself be hard (e.g.\ GMC vs.\ Chevrolet),
+  we will measure first-stage accuracy and check whether any gain survives with pre-training.
   \item \hl{Target look-alike pairs}: aspect-preserving resize and a larger input size to keep emblem and grille detail.
   Class-balanced loss \cite{cbloss} for the small classes (Patriot, 528i, Golf).
-  \item \hl{Reliability}: repeat each setting with 3 seeds and report mean $\pm$ std (runs A and B used the same seed, so they
-  measure hardware/run variation, not seed variation). The test set is used only for the final comparison.
+  \item \hl{Reliability}: repeat each setting with 3 seeds and report mean $\pm$ std; use the test set only for the final comparison.
 \end{enumerate}
 
 % ------------------------------------------------------------------ 6
@@ -203,8 +204,7 @@ The same classes are hardest in both runs (328i, Ram 1500, Sierra, Golf, Cheroke
 confusion matrix, per-class scores and predictions to \texttt{result\_task2/<run>/}. The submitted archive contains the code,
 split files, both result folders (run A: \texttt{baseline\_seed0\_DonghyunShin}, run B: \texttt{baseline\_seed0\_Hyeonil\_Cho})
 and a \texttt{README.md} with setup and run instructions.
-\textit{Limitations}: one seed; near-duplicate images were not audited. Run B's recorded hashes differ from run A's only
-because Windows converted line endings (contents verified identical).
+\textit{Limitations}: one seed; near-duplicates not audited; run B's hashes differ only by Windows line endings.
 
 {\footnotesize
 \begin{thebibliography}{9}\setlength{\itemsep}{0pt}

@@ -9,6 +9,9 @@ STAGE="$(mktemp -d)/$NAME"
 trap 'rm -rf "$(dirname "$STAGE")"' EXIT
 
 (cd "$ROOT/task2/report" && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex >/dev/null)
+pages=$(sed -n 's/^Output written on .*(\([0-9]*\) pages\{0,1\},.*/\1/p' "$ROOT/task2/report/build/main.log")
+[[ "$pages" =~ ^[0-9]+$ ]] || { echo "could not read the page count from main.log" >&2; exit 1; }
+[ "$pages" -le 2 ] || { echo "report has $pages pages; the limit is 2" >&2; exit 1; }
 cp "$ROOT/task2/report/build/main.pdf" "$SUB/Activity2_Report.pdf"
 
 mkdir -p "$STAGE/task2/report/figures" "$STAGE/splits" "$STAGE/result_task2"
