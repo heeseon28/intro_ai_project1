@@ -1,0 +1,30 @@
+{
+  "out_dir": "/home/work/Intro_AI/intro_ai_project1/runs_full/make_v1/seed2",
+  "data_root": "/home/work/Intro_AI/intro_ai_project1/dataset/VMMRdb",
+  "seed": 2,
+  "epochs": 30,
+  "batch_size": 64,
+  "workers": 2,
+  "patience": 5,
+  "smoke": false,
+  "check_only": false,
+  "split_sha256": {
+    "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c",
+    "test.csv": "91b55d4bf14dfb6d11cb355e1c765db3cf7fab0c5b8fd67e2da4c716ed38dd55",
+    "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
+    "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b"
+  },
+  "source_sha256": "208af6ae5ba0c3dbbbefe52c3a9b02089b2dfa5966e6a8827dcc269dfbfb04ec",
+  "protocol": "manufacturer_hierarchy_multiseed_v1",
+  "backbone": "resnet18",
+  "pretraining": "random for smoke; ImageNet1K_V1 for pilot",
+  "experiments": [
+    "flat",
+    "hierarchy",
+    "hierarchy_make_weighted"
+  ],
+  "weight": "inverse sqrt TRAIN manufacturer frequency",
+  "device": "CUDA GPU",
+  "torch_version": "2.8.0a0+5228986c39.nv25.05",
+  "test_policy": "reserved; no test metrics"
+}

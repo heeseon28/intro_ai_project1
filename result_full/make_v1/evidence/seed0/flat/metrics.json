@@ -1,0 +1,490 @@
+{
+  "top3_accuracy": 0.9857633222666141,
+  "accuracy": 0.9426593888920151,
+  "macro_f1": 0.9211456922327025,
+  "balanced_accuracy": 0.9184960840660537,
+  "make_accuracy": 0.9678690000562714,
+  "cross_make_error_rate": 0.032243542850711834,
+  "within_make_error_rate": 0.025097068257273085,
+  "loss": 0.26534828660724263,
+  "per_class": [
+    {
+      "model_idx": 0,
+      "label": "ford/mustang",
+      "precision": 0.9561304836895388,
+      "recall": 0.9837962962962963,
+      "f1": 0.9697661152310325,
+      "support": 864
+    },
+    {
+      "model_idx": 1,
+      "label": "ford/f150",
+      "precision": 0.9564068692206077,
+      "recall": 0.9653333333333334,
+      "f1": 0.9608493696084937,
+      "support": 750
+    },
+    {
+      "model_idx": 2,
+      "label": "ford/explorer",
+      "precision": 0.9823369565217391,
+      "recall": 0.9863574351978172,
+      "f1": 0.9843430905377808,
+      "support": 733
+    },
+    {
+      "model_idx": 3,
+      "label": "ford/taurus",
+      "precision": 0.9679358717434869,
+      "recall": 0.9757575757575757,
+      "f1": 0.971830985915493,
+      "support": 495
+    },
+    {
+      "model_idx": 4,
+      "label": "ford/focus",
+      "precision": 0.9655913978494624,
+      "recall": 0.9782135076252724,
+      "f1": 0.9718614718614719,
+      "support": 459
+    },
+    {
+      "model_idx": 5,
+      "label": "chevrolet/silverado",
+      "precision": 0.8779284833538841,
+      "recall": 0.9047013977128335,
+      "f1": 0.8911138923654568,
+      "support": 787
+    },
+    {
+      "model_idx": 6,
+      "label": "chevrolet/impala",
+      "precision": 0.9657534246575342,
+      "recall": 0.9559322033898305,
+      "f1": 0.9608177172061328,
+      "support": 590
+    },
+    {
+      "model_idx": 7,
+      "label": "chevrolet/corvette",
+      "precision": 0.9730941704035875,
+      "recall": 0.9752808988764045,
+      "f1": 0.9741863075196409,
+      "support": 445
+    },
+    {
+      "model_idx": 8,
+      "label": "chevrolet/tahoe",
+      "precision": 0.8712121212121212,
+      "recall": 0.8868894601542416,
+      "f1": 0.8789808917197452,
+      "support": 389
+    },
+    {
+      "model_idx": 9,
+      "label": "chevrolet/malibu",
+      "precision": 0.953125,
+      "recall": 0.9384615384615385,
+      "f1": 0.9457364341085271,
+      "support": 325
+    },
+    {
+      "model_idx": 10,
+      "label": "toyota/camry",
+      "precision": 0.9625468164794008,
+      "recall": 0.9710327455919395,
+      "f1": 0.9667711598746082,
+      "support": 794
+    },
+    {
+      "model_idx": 11,
+      "label": "toyota/corolla",
+      "precision": 0.9678030303030303,
+      "recall": 0.9290909090909091,
+      "f1": 0.948051948051948,
+      "support": 550
+    },
+    {
+      "model_idx": 12,
+      "label": "toyota/4runner",
+      "precision": 0.9669117647058824,
+      "recall": 0.9326241134751773,
+      "f1": 0.9494584837545126,
+      "support": 282
+    },
+    {
+      "model_idx": 13,
+      "label": "toyota/sienna",
+      "precision": 0.9893617021276596,
+      "recall": 1.0,
+      "f1": 0.9946524064171123,
+      "support": 279
+    },
+    {
+      "model_idx": 14,
+      "label": "toyota/tacoma",
+      "precision": 0.9377593360995851,
+      "recall": 0.9535864978902954,
+      "f1": 0.9456066945606695,
+      "support": 237
+    },
+    {
+      "model_idx": 15,
+      "label": "honda/civic",
+      "precision": 0.9529750479846449,
+      "recall": 0.9640776699029127,
+      "f1": 0.9584942084942085,
+      "support": 1030
+    },
+    {
+      "model_idx": 16,
+      "label": "honda/accord",
+      "precision": 0.9447791164658634,
+      "recall": 0.9731127197518097,
+      "f1": 0.9587366276107998,
+      "support": 967
+    },
+    {
+      "model_idx": 17,
+      "label": "honda/odyssey",
+      "precision": 0.9977973568281938,
+      "recall": 0.978401727861771,
+      "f1": 0.9880043620501636,
+      "support": 463
+    },
+    {
+      "model_idx": 18,
+      "label": "honda/cr-v",
+      "precision": 0.996078431372549,
+      "recall": 0.9844961240310077,
+      "f1": 0.9902534113060428,
+      "support": 258
+    },
+    {
+      "model_idx": 19,
+      "label": "honda/pilot",
+      "precision": 0.9861111111111112,
+      "recall": 0.993006993006993,
+      "f1": 0.9895470383275261,
+      "support": 143
+    },
+    {
+      "model_idx": 20,
+      "label": "nissan/altima",
+      "precision": 0.9770580296896086,
+      "recall": 0.9589403973509933,
+      "f1": 0.9679144385026738,
+      "support": 755
+    },
+    {
+      "model_idx": 21,
+      "label": "nissan/maxima",
+      "precision": 0.9681528662420382,
+      "recall": 0.96,
+      "f1": 0.9640591966173362,
+      "support": 475
+    },
+    {
+      "model_idx": 22,
+      "label": "nissan/sentra",
+      "precision": 0.9568965517241379,
+      "recall": 0.9514285714285714,
+      "f1": 0.9541547277936963,
+      "support": 350
+    },
+    {
+      "model_idx": 23,
+      "label": "nissan/pathfinder",
+      "precision": 0.9797979797979798,
+      "recall": 0.9463414634146341,
+      "f1": 0.9627791563275434,
+      "support": 205
+    },
+    {
+      "model_idx": 24,
+      "label": "nissan/quest",
+      "precision": 0.9947916666666666,
+      "recall": 0.9646464646464646,
+      "f1": 0.9794871794871794,
+      "support": 198
+    },
+    {
+      "model_idx": 25,
+      "label": "dodge/grand caravan",
+      "precision": 0.9754464285714286,
+      "recall": 0.9864559819413092,
+      "f1": 0.9809203142536476,
+      "support": 443
+    },
+    {
+      "model_idx": 26,
+      "label": "dodge/durango",
+      "precision": 0.9971181556195965,
+      "recall": 0.9885714285714285,
+      "f1": 0.9928263988522238,
+      "support": 350
+    },
+    {
+      "model_idx": 27,
+      "label": "dodge/ram_1500",
+      "precision": 0.7428571428571429,
+      "recall": 0.6964285714285714,
+      "f1": 0.7188940092165899,
+      "support": 224
+    },
+    {
+      "model_idx": 28,
+      "label": "dodge/ram_2500",
+      "precision": 0.6956521739130435,
+      "recall": 0.6881720430107527,
+      "f1": 0.6918918918918919,
+      "support": 186
+    },
+    {
+      "model_idx": 29,
+      "label": "dodge/charger",
+      "precision": 0.9230769230769231,
+      "recall": 0.9285714285714286,
+      "f1": 0.9258160237388724,
+      "support": 168
+    },
+    {
+      "model_idx": 30,
+      "label": "volkswagen/jetta",
+      "precision": 0.9617590822179732,
+      "recall": 0.9544592030360531,
+      "f1": 0.9580952380952381,
+      "support": 527
+    },
+    {
+      "model_idx": 31,
+      "label": "volkswagen/passat",
+      "precision": 0.9701492537313433,
+      "recall": 0.9523809523809523,
+      "f1": 0.9611829944547134,
+      "support": 273
+    },
+    {
+      "model_idx": 32,
+      "label": "volkswagen/beetle",
+      "precision": 0.9815950920245399,
+      "recall": 0.9876543209876543,
+      "f1": 0.9846153846153847,
+      "support": 162
+    },
+    {
+      "model_idx": 33,
+      "label": "volkswagen/gti",
+      "precision": 0.8,
+      "recall": 0.8849557522123894,
+      "f1": 0.8403361344537815,
+      "support": 113
+    },
+    {
+      "model_idx": 34,
+      "label": "volkswagen/golf",
+      "precision": 0.8064516129032258,
+      "recall": 0.704225352112676,
+      "f1": 0.7518796992481203,
+      "support": 71
+    },
+    {
+      "model_idx": 35,
+      "label": "jeep/grand_cherokee",
+      "precision": 0.9056603773584906,
+      "recall": 0.96579476861167,
+      "f1": 0.934761441090555,
+      "support": 497
+    },
+    {
+      "model_idx": 36,
+      "label": "jeep/liberty",
+      "precision": 0.9955357142857143,
+      "recall": 0.9867256637168141,
+      "f1": 0.9911111111111112,
+      "support": 226
+    },
+    {
+      "model_idx": 37,
+      "label": "jeep/wrangler",
+      "precision": 0.9775784753363229,
+      "recall": 0.9819819819819819,
+      "f1": 0.9797752808988764,
+      "support": 222
+    },
+    {
+      "model_idx": 38,
+      "label": "jeep/cherokee",
+      "precision": 0.849624060150376,
+      "recall": 0.6807228915662651,
+      "f1": 0.7558528428093646,
+      "support": 166
+    },
+    {
+      "model_idx": 39,
+      "label": "jeep/patriot",
+      "precision": 0.9512195121951219,
+      "recall": 0.975,
+      "f1": 0.9629629629629629,
+      "support": 40
+    },
+    {
+      "model_idx": 40,
+      "label": "bmw/325i",
+      "precision": 0.7513812154696132,
+      "recall": 0.8343558282208589,
+      "f1": 0.7906976744186046,
+      "support": 163
+    },
+    {
+      "model_idx": 41,
+      "label": "bmw/x5",
+      "precision": 0.987012987012987,
+      "recall": 0.9743589743589743,
+      "f1": 0.9806451612903225,
+      "support": 156
+    },
+    {
+      "model_idx": 42,
+      "label": "bmw/328i",
+      "precision": 0.7570093457943925,
+      "recall": 0.6377952755905512,
+      "f1": 0.6923076923076923,
+      "support": 127
+    },
+    {
+      "model_idx": 43,
+      "label": "bmw/528i",
+      "precision": 0.859375,
+      "recall": 0.8088235294117647,
+      "f1": 0.8333333333333334,
+      "support": 68
+    },
+    {
+      "model_idx": 44,
+      "label": "bmw/530i",
+      "precision": 0.9,
+      "recall": 0.9152542372881356,
+      "f1": 0.907563025210084,
+      "support": 59
+    },
+    {
+      "model_idx": 45,
+      "label": "gmc/sierra_1500",
+      "precision": 0.7464788732394366,
+      "recall": 0.6597510373443983,
+      "f1": 0.7004405286343612,
+      "support": 241
+    },
+    {
+      "model_idx": 46,
+      "label": "gmc/yukon_1500",
+      "precision": 0.8385650224215246,
+      "recall": 0.8617511520737328,
+      "f1": 0.85,
+      "support": 217
+    },
+    {
+      "model_idx": 47,
+      "label": "gmc/envoy",
+      "precision": 0.9664429530201343,
+      "recall": 0.972972972972973,
+      "f1": 0.9696969696969697,
+      "support": 148
+    },
+    {
+      "model_idx": 48,
+      "label": "gmc/jimmy",
+      "precision": 0.9245283018867925,
+      "recall": 0.9074074074074074,
+      "f1": 0.9158878504672897,
+      "support": 54
+    },
+    {
+      "model_idx": 49,
+      "label": "gmc/acadia",
+      "precision": 0.9387755102040817,
+      "recall": 0.9787234042553191,
+      "f1": 0.9583333333333334,
+      "support": 47
+    }
+  ],
+  "per_make": [
+    {
+      "make_idx": 0,
+      "make": "ford",
+      "n": 3301,
+      "fine_accuracy": 0.9781884277491669,
+      "make_accuracy": 0.9818236897909725
+    },
+    {
+      "make_idx": 1,
+      "make": "chevrolet",
+      "n": 2536,
+      "fine_accuracy": 0.9305993690851735,
+      "make_accuracy": 0.9503154574132492
+    },
+    {
+      "make_idx": 2,
+      "make": "toyota",
+      "n": 2142,
+      "fine_accuracy": 0.9570494864612512,
+      "make_accuracy": 0.969187675070028
+    },
+    {
+      "make_idx": 3,
+      "make": "honda",
+      "n": 2861,
+      "fine_accuracy": 0.9727368053128277,
+      "make_accuracy": 0.9821740650122335
+    },
+    {
+      "make_idx": 4,
+      "make": "nissan",
+      "n": 1983,
+      "fine_accuracy": 0.957135653050933,
+      "make_accuracy": 0.967725668179526
+    },
+    {
+      "make_idx": 5,
+      "make": "dodge",
+      "n": 1371,
+      "fine_accuracy": 0.8920495988329686,
+      "make_accuracy": 0.962800875273523
+    },
+    {
+      "make_idx": 6,
+      "make": "volkswagen",
+      "n": 1146,
+      "fine_accuracy": 0.9363001745200699,
+      "make_accuracy": 0.9738219895287958
+    },
+    {
+      "make_idx": 7,
+      "make": "jeep",
+      "n": 1151,
+      "fine_accuracy": 0.9322328410078193,
+      "make_accuracy": 0.9860990443092963
+    },
+    {
+      "make_idx": 8,
+      "make": "bmw",
+      "n": 573,
+      "fine_accuracy": 0.8342059336823735,
+      "make_accuracy": 0.9703315881326352
+    },
+    {
+      "make_idx": 9,
+      "make": "gmc",
+      "n": 707,
+      "fine_accuracy": 0.8274398868458275,
+      "make_accuracy": 0.8727015558698727
+    }
+  ],
+  "minority_make_fine_accuracy": 0.8659819983494236,
+  "experiment": "flat",
+  "seed": 0,
+  "split": "validation",
+  "smoke": false,
+  "epochs_completed": 30
+}

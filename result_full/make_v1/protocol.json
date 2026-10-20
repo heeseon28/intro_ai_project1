@@ -1,0 +1,26 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "models": [
+    "flat",
+    "hierarchy",
+    "hierarchy_make_weighted"
+  ],
+  "epochs": 30,
+  "patience": 5,
+  "batch_size": 64,
+  "workers": 2,
+  "input_size": 224,
+  "pretraining": "ImageNet1K_V1",
+  "weight": "inverse sqrt TRAIN make frequency",
+  "selection": "validation macro_f1",
+  "test": "reserved, not evaluated",
+  "source_sha256": {
+    "full_train.py": "208af6ae5ba0c3dbbbefe52c3a9b02089b2dfa5966e6a8827dcc269dfbfb04ec",
+    "run_full_experiments.py": "06c2bddb2747ae4492a5a1d16b8839a763a01e833d0cdff0eb790f920790c626",
+    "summarize_full.py": "aa493dd139d51535eff4c108e9e73d25f96d094de50198bdbe5b762b7231e1ff"
+  }
+}
