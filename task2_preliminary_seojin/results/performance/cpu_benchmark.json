@@ -1,0 +1,106 @@
+{
+  "benchmark": "synthetic CPU kernel benchmark; excludes data I/O and preprocessing",
+  "started_at": "2026-10-19T14:19:20.785830+00:00",
+  "state": "completed",
+  "configuration": {
+    "model": "torchvision.models.resnet18",
+    "pretrained_weights": null,
+    "classes": 50,
+    "seed": 0,
+    "dtype": "float32",
+    "device": "cpu",
+    "input_shape": [
+      64,
+      3,
+      224,
+      224
+    ],
+    "optimizer": "Adam",
+    "learning_rate": 0.0003,
+    "loss": "unweighted CrossEntropyLoss",
+    "training_warmup_steps": 1,
+    "training_measured_steps": 2,
+    "evaluation_warmup_steps": 1,
+    "evaluation_measured_steps": 2,
+    "thread_candidates": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "machine": "AMD64",
+    "logical_cpu_count": 16,
+    "python": "3.11.5",
+    "torch": "2.14.1+cpu",
+    "torch_interop_threads": 12,
+    "torch_parallel_info": "ATen/Parallel:\n\tat::get_num_threads() : 12\n\tat::get_num_interop_threads() : 12\nOpenMP 2019\n\tomp_get_max_threads() : 12\nIntel(R) oneAPI Math Kernel Library Version 2026.1-Product Build 20260612 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 12\nIntel(R) MKL-DNN v3.12.0 (Git Hash 80afa71049cd69a3df32adcccb623b12cd7baa22)\nstd::thread::hardware_concurrency() : 16\nEnvironment variables:\n\tOMP_NUM_THREADS : [not set]\n\tMKL_NUM_THREADS : [not set]\nATen parallel backend: OpenMP\n"
+  },
+  "candidates": [
+    {
+      "thread_count": 4,
+      "actual_torch_threads": 4,
+      "training_warmup_seconds": 7.889292999985628,
+      "training_step_seconds": [
+        8.102791799989063,
+        7.033324099960737
+      ],
+      "training_images_per_second": 8.456594865293315,
+      "evaluation_step_seconds": [
+        2.6320517000276595,
+        2.8552163999993354
+      ],
+      "evaluation_images_per_second": 23.326726098797742
+    },
+    {
+      "thread_count": 8,
+      "actual_torch_threads": 8,
+      "training_warmup_seconds": 5.354451399995014,
+      "training_step_seconds": [
+        5.484885499987286,
+        5.4818354999879375
+      ],
+      "training_images_per_second": 11.671674696592463,
+      "evaluation_step_seconds": [
+        2.28774689999409,
+        2.198556200019084
+      ],
+      "evaluation_images_per_second": 28.53128670678183
+    },
+    {
+      "thread_count": 12,
+      "actual_torch_threads": 12,
+      "training_warmup_seconds": 5.123752799991053,
+      "training_step_seconds": [
+        5.115746899973601,
+        4.869092000008095
+      ],
+      "training_images_per_second": 12.819435674644149,
+      "evaluation_step_seconds": [
+        1.8183099000016227,
+        2.0139673000085168
+      ],
+      "evaluation_images_per_second": 33.40050662297115
+    },
+    {
+      "thread_count": 16,
+      "actual_torch_threads": 16,
+      "training_warmup_seconds": 5.227576800039969,
+      "training_step_seconds": [
+        4.682709599961527,
+        4.713032300001942
+      ],
+      "training_images_per_second": 13.623192437895476,
+      "evaluation_step_seconds": [
+        1.6315667000017129,
+        1.6928837999585085
+      ],
+      "evaluation_images_per_second": 38.50260366383304
+    }
+  ],
+  "fastest_thread_count": 16,
+  "completed_at": "2026-10-19T14:20:56.879691+00:00"
+}

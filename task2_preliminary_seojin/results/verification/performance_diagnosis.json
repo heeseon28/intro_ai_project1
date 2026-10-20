@@ -1,0 +1,1464 @@
+{
+  "purpose": "Read-only performance diagnosis while existing trainer continues; no changes to process, power, affinity or workload",
+  "trainer_pid": 39304,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-1260P",
+  "logical_cpu_count": 16,
+  "samples": [
+    {
+      "utc": "2026-10-20T06:29:06.601091+00:00",
+      "pdh": {
+        "\\Processor Information(_Total)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 73.4197343297353
+        },
+        "\\Processor Information(_Total)\\Processor Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 1800.0
+        },
+        "\\Processor Information(_Total)\\% of Maximum Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 79.0
+        },
+        "\\Processor Information(_Total)\\% Processor Utility": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 73.4133976493936
+        },
+        "\\Processor Information(_Total)\\% Processor Time": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(_Total)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(_Total)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 85.0
+        },
+        "\\Processor Information(_Total)\\Parking Status": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 82.02512239817302
+        },
+        "\\Processor Information(0,0)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,1)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 82.02840405530304
+        },
+        "\\Processor Information(0,1)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,1)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,2)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.5828112648104
+        },
+        "\\Processor Information(0,2)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,2)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,3)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.58311446909563
+        },
+        "\\Processor Information(0,3)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,3)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,4)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.19366208049682
+        },
+        "\\Processor Information(0,4)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,4)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,5)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.19387397396423
+        },
+        "\\Processor Information(0,5)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,5)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,6)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.9814626217737
+        },
+        "\\Processor Information(0,6)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,6)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,7)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 81.98160891343741
+        },
+        "\\Processor Information(0,7)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,7)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,8)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 65.41478756437323
+        },
+        "\\Processor Information(0,8)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,8)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,9)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 65.41522193444955
+        },
+        "\\Processor Information(0,9)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,9)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,10)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 65.41586295741791
+        },
+        "\\Processor Information(0,10)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,10)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,11)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 65.4159596936349
+        },
+        "\\Processor Information(0,11)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,11)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,12)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 64.87800037508399
+        },
+        "\\Processor Information(0,12)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,12)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,13)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 64.87827675789796
+        },
+        "\\Processor Information(0,13)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,13)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,14)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 64.87822165458324
+        },
+        "\\Processor Information(0,14)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,14)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,15)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 64.87851453848376
+        },
+        "\\Processor Information(0,15)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,15)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Thermal Zone Information(*)\\Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 363.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 363.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\High Precision Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 3632.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 3632.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\% Passive Limit": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 100.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 100.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\Throttle Reasons": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 0.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "processor_information_status": 0,
+      "processors": [
+        {
+          "Number": 0,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 1,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 2,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 3,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 4,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 5,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 6,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 7,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1453,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 8,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 9,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 10,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 11,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 12,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 13,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 14,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 15,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-20T06:29:08.611665+00:00",
+      "pdh": {
+        "\\Processor Information(_Total)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 69.51900395057378
+        },
+        "\\Processor Information(_Total)\\Processor Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 1759.0
+        },
+        "\\Processor Information(_Total)\\% of Maximum Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 67.0
+        },
+        "\\Processor Information(_Total)\\% Processor Utility": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 69.51392057225316
+        },
+        "\\Processor Information(_Total)\\% Processor Time": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(_Total)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(_Total)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 85.0
+        },
+        "\\Processor Information(_Total)\\Parking Status": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.34635654780047
+        },
+        "\\Processor Information(0,0)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,1)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.34618324397475
+        },
+        "\\Processor Information(0,1)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,1)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,2)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.73601865528597
+        },
+        "\\Processor Information(0,2)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,2)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,3)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.73583159512222
+        },
+        "\\Processor Information(0,3)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,3)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,4)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.73830950098102
+        },
+        "\\Processor Information(0,4)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,4)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,5)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.73819265585377
+        },
+        "\\Processor Information(0,5)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,5)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,6)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.79140514129513
+        },
+        "\\Processor Information(0,6)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,6)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,7)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 76.79111643419196
+        },
+        "\\Processor Information(0,7)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,7)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,8)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.531652602370926
+        },
+        "\\Processor Information(0,8)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,8)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,9)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.53140866545019
+        },
+        "\\Processor Information(0,9)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,9)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,10)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.530886685588385
+        },
+        "\\Processor Information(0,10)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,10)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,11)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.53065604386272
+        },
+        "\\Processor Information(0,11)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,11)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,12)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.199646805774925
+        },
+        "\\Processor Information(0,12)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,12)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,13)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.19921646502864
+        },
+        "\\Processor Information(0,13)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,13)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,14)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.1990753454557
+        },
+        "\\Processor Information(0,14)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,14)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,15)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.199043274107446
+        },
+        "\\Processor Information(0,15)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,15)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Thermal Zone Information(*)\\Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 363.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 363.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\High Precision Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 3632.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 3632.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\% Passive Limit": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 100.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 100.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\Throttle Reasons": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 0.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "processor_information_status": 0,
+      "processors": [
+        {
+          "Number": 0,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 1,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 2,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 3,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 4,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 5,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 6,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 7,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1453,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 8,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 9,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 10,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 11,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 12,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 13,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 14,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 15,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-20T06:29:10.620415+00:00",
+      "pdh": {
+        "\\Processor Information(_Total)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0122152283552
+        },
+        "\\Processor Information(_Total)\\Processor Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 1759.0
+        },
+        "\\Processor Information(_Total)\\% of Maximum Frequency": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 80.0
+        },
+        "\\Processor Information(_Total)\\% Processor Utility": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.01829998167054
+        },
+        "\\Processor Information(_Total)\\% Processor Time": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(_Total)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(_Total)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 85.0
+        },
+        "\\Processor Information(_Total)\\Parking Status": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.83995345723486
+        },
+        "\\Processor Information(0,0)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,0)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,1)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.8394391003929
+        },
+        "\\Processor Information(0,1)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,1)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,2)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.65904955756585
+        },
+        "\\Processor Information(0,2)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,2)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,3)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.65919909719715
+        },
+        "\\Processor Information(0,3)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,3)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,4)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.89016501229324
+        },
+        "\\Processor Information(0,4)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,4)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,5)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.89031059524113
+        },
+        "\\Processor Information(0,5)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,5)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,6)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.92934932039067
+        },
+        "\\Processor Information(0,6)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,6)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,7)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 78.92977934408121
+        },
+        "\\Processor Information(0,7)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 0.0
+        },
+        "\\Processor Information(0,7)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 100.0
+        },
+        "\\Processor Information(0,8)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 63.54647250191673
+        },
+        "\\Processor Information(0,8)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,8)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,9)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 63.54671971359758
+        },
+        "\\Processor Information(0,9)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,9)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,10)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 63.54708981215082
+        },
+        "\\Processor Information(0,10)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,10)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,11)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 63.547227916258876
+        },
+        "\\Processor Information(0,11)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,11)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,12)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.878435826319816
+        },
+        "\\Processor Information(0,12)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,12)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,13)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.87863427697016
+        },
+        "\\Processor Information(0,13)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,13)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,14)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.879080398942236
+        },
+        "\\Processor Information(0,14)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,14)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Processor Information(0,15)\\% Processor Performance": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 62.87912343650127
+        },
+        "\\Processor Information(0,15)\\Performance Limit Flags": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 2.0
+        },
+        "\\Processor Information(0,15)\\% Performance Limit": {
+          "status": "0x0",
+          "cstatus": 0,
+          "value": 71.0
+        },
+        "\\Thermal Zone Information(*)\\Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 363.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 363.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\High Precision Temperature": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 3632.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 3632.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\% Passive Limit": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 100.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 100.0
+            }
+          ]
+        },
+        "\\Thermal Zone Information(*)\\Throttle Reasons": {
+          "status": "0x0",
+          "instances": [
+            {
+              "name": "\\_TZ.TZ00",
+              "cstatus": 0,
+              "value": 0.0
+            },
+            {
+              "name": "\\_TZ.TZ01",
+              "cstatus": 0,
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "processor_information_status": 0,
+      "processors": [
+        {
+          "Number": 0,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 1,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 2,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 3,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1453,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 4,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 5,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 6,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 7,
+          "MaxMhz": 2100,
+          "CurrentMhz": 2100,
+          "MhzLimit": 2100,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 8,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 9,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 10,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 11,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 12,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 13,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 14,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        },
+        {
+          "Number": 15,
+          "MaxMhz": 2100,
+          "CurrentMhz": 1500,
+          "MhzLimit": 1491,
+          "MaxIdleState": 11,
+          "CurrentIdleState": 1
+        }
+      ]
+    }
+  ],
+  "pdh_add_errors": {},
+  "native_counter_help": {
+    "\\Processor Information(_Total)\\% Processor Performance": "Processor Performance는 프로세서의 명령 실행 평균 성능으로, 프로세서의 명목 성능 대비 백분율로 나타냅니다. 일부 프로세서의 경우 Processor Performance가 100%를 초과할 수 있습니다. 일부 프로세서는 Windows의 제어를 받지 않고 주파수를 규제할 수 있습니다. Processor Performance는 이러한 시스템에서 실제 프로세서 주파수를 정확하게 반영하지 않습니다.",
+    "\\Processor Information(_Total)\\Processor Frequency": "Processor Frequency는 현재 프로세서의 주파수(MB)입니다. 일부 프로세서는 Windows 제어 외부에서 주파수를 규제할 수 있습니다. 프로세서 주파수는 이러한 시스템의 실제 프로세서 주파수를 정확하게 반영하지 않습니다. 대신 % 프로세서 성능 또는 실제 주파수를 사용하세요.",
+    "\\Processor Information(_Total)\\% of Maximum Frequency": "% of Maximum Frequency는 현재 프로세서의 최대 주파수의 백분율입니다. 일부 프로세서는 Windows의 제어를 받지 않고 주파수를 규제할 수 있습니다. % of Maximum Frequency는 이러한 시스템에서 실제 프로세서 주파수를 정확하게 반영하지 않습니다. 대신 % Processor Performance를 사용하십시오.",
+    "\\Processor Information(_Total)\\% Processor Utility": "Processor Utility는 프로세서가 완료하는 작업량으로, 프로세서가 명목 성능으로 실행되며 유휴 상태가 되지 않는 경우 완료할 수 있는 작업량 대비 백분율로 나타냅니다. 일부 프로세서의 경우 Processor Utility가 100%를 초과할 수 있습니다.",
+    "\\Processor Information(_Total)\\% Processor Time": "% Processor Time은 프로세서가 작업 중인 스레드를 실행하는 데 걸리는 시간의 백분율입니다. 이 시간은 프로세서가 유휴 스레드를 실행하는 데 걸리는 시간의 백분율을 측정한 다음 100%에서 이 값을 빼서 계산합니다. 각 프로세서에는 실행할 다른 스레드가 없는 경우 시간이 누적되는 유휴 스레드가 있습니다. 이 카운터는 프로세서 동작의 주요 표시기이며 샘플 간격 중에 관찰되는 사용 시간의 평균 백분율을 표시합니다. 프로세서가 유휴 상태인지에 대한 계정 계산은 시스템 클록 틱에 대한 내부 샘플링 간격에 따라 수행됩니다. 현재 시판 중인 고속 프로세서의 경우 프로세서가 시스템 클록 샘플링 간격 사이의 스레드를 서비스하느라 너무 많은 시간을 소비할 수 있으므로 % Processor Time은 프로세서 이용률을 올바르게 반영하지 못할 수 있습니다. 작업 부하 기반 타이머 응용 프로그램은 샘플이 실행된 직후에 타이머가 신호를 받기 때문에 부정확하게 측정될 수 있는 응용 프로그램의 한 예입니다.",
+    "\\Processor Information(_Total)\\Performance Limit Flags": "성능 제한 플래그는 프로세서 성능이 제한된 이유를 나타냅니다.",
+    "\\Processor Information(_Total)\\% Performance Limit": "성능 제한 비율(%)은 프로세서가 제공할 수 있다고 보장하는 성능을 프로세서의 명목 성능 비율로 나타낸 것입니다. 성능은 Windows 전원 정책이나 전원 할당량, 과열 또는 기타 하드웨어 문제의 결과로 플랫폼에 의해 제한될 수 있습니다.",
+    "\\Processor Information(_Total)\\Parking Status": "Parking Status는 프로세서가 파킹되었는지 여부를 나타냅니다.",
+    "\\Thermal Zone Information(*)\\Temperature": "절대 온도 단위로 표시되는 열 영역의 온도입니다.",
+    "\\Thermal Zone Information(*)\\High Precision Temperature": "열 영역의 온도(단위: 절대 온도의 1/10)입니다.",
+    "\\Thermal Zone Information(*)\\% Passive Limit": "% Passive Limit는 이 열 영역이 제어하는 장치에 지정하고 있는 현재 한도입니다. 한도 100%는 장치가 제한되지 않음을 나타냅니다. 한도 0%는 장치가 완전히 제한됨을 나타냅니다.",
+    "\\Thermal Zone Information(*)\\Throttle Reasons": "Throttle Reasons는 열 영역이 제어하는 장치의 성능을 제한하고 있는 이유를 나타냅니다."
+  },
+  "interpretation": {
+    "observation": "PDH reports active performance limiting and near fully busy CPU; exact root policy or thermal/power trigger is not identified by these readings alone.",
+    "flags": "Performance Limit Flags raw value 2; exact flag meaning not verified against primary documentation.",
+    "frequency_caveat": "Reported Processor Frequency can differ from actual hardware frequency; native PDH help advises Processor Performance on hardware that autonomously regulates frequency.",
+    "hybrid_cpu_caveat": "Legacy PROCESSOR_POWER_INFORMATION MaxMhz/CurrentMhz/MhzLimit vary by P/E core; 2.1GHz/1.5GHz pattern alone is not proof of thermal throttling.",
+    "temperature_caveat": "ACPI thermal zone temperatures, if present, are not necessarily CPU package temperature.",
+    "causality_caveat": "These performance-limit readings also overlap a trainer throughput recovery reported by the log monitor; no matching earlier fast-period CPU counter baseline exists, so these readings alone cannot explain the preceding slowdown or establish overheating as its cause."
+  },
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/win32/power/processor-power-information-str",
+    "https://learn.microsoft.com/en-us/windows/win32/api/pdh/nf-pdh-pdhaddenglishcounterw"
+  ]
+}

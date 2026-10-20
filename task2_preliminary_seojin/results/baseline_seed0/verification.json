@@ -1,0 +1,508 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-20T17:59:49.159808+00:00",
+  "run_dir": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\task2_preliminary_seojin\\results\\baseline_seed0",
+  "smoke_test_only": false,
+  "checks_passed": 98,
+  "checks_total": 98,
+  "recomputed_validation": {
+    "samples": 17771,
+    "accuracy": 0.7710314557425019,
+    "macro_f1": 0.7283337911822862,
+    "balanced_accuracy": 0.7166458809052354
+  },
+  "errors": [],
+  "checks": [
+    {
+      "name": "read config.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read status.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read metrics.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read data_audit.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke flag is boolean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "run status is complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metrics are complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "smoke flags agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test was not evaluated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test images were not opened",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stored MD5 has no cross-split overlap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "configured epoch count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "completed epoch count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "checkpoint selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "baseline setting architecture",
+      "passed": true,
+      "detail": "recorded='torchvision ResNet-18'; required='torchvision ResNet-18'"
+    },
+    {
+      "name": "baseline setting initialization",
+      "passed": true,
+      "detail": "recorded='random, weights=None'; required='random, weights=None'"
+    },
+    {
+      "name": "baseline setting image_size",
+      "passed": true,
+      "detail": "recorded=224; required=224"
+    },
+    {
+      "name": "baseline setting learning_rate",
+      "passed": true,
+      "detail": "recorded=0.0003; required=0.0003"
+    },
+    {
+      "name": "baseline setting optimizer",
+      "passed": true,
+      "detail": "recorded='Adam'; required='Adam'"
+    },
+    {
+      "name": "baseline setting loss",
+      "passed": true,
+      "detail": "recorded='unweighted CrossEntropyLoss'; required='unweighted CrossEntropyLoss'"
+    },
+    {
+      "name": "baseline setting seed",
+      "passed": true,
+      "detail": "recorded=0; required=0"
+    },
+    {
+      "name": "baseline setting normalization",
+      "passed": true,
+      "detail": "recorded={'mean': [0.5, 0.5, 0.5], 'std': [0.5, 0.5, 0.5]}; required={'mean': [0.5, 0.5, 0.5], 'std': [0.5, 0.5, 0.5]}"
+    },
+    {
+      "name": "baseline setting resize",
+      "passed": true,
+      "detail": "recorded='deterministic square resize'; required='deterministic square resize'"
+    },
+    {
+      "name": "baseline setting augmentation",
+      "passed": true,
+      "detail": "recorded=False; required=False"
+    },
+    {
+      "name": "baseline setting transfer_learning",
+      "passed": true,
+      "detail": "recorded=False; required=False"
+    },
+    {
+      "name": "baseline setting rebalancing",
+      "passed": true,
+      "detail": "recorded=False; required=False"
+    },
+    {
+      "name": "baseline setting hierarchy",
+      "passed": true,
+      "detail": "recorded=False; required=False"
+    },
+    {
+      "name": "baseline setting scheduler",
+      "passed": true,
+      "detail": "recorded=False; required=False"
+    },
+    {
+      "name": "baseline setting precision",
+      "passed": true,
+      "detail": "recorded='float32'; required='float32'"
+    },
+    {
+      "name": "baseline batch size",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "saved training source SHA256",
+      "passed": true,
+      "detail": "6ab2295c86441e4ce54382cb8734b46b95af56360752e643b50caef404b3796a"
+    },
+    {
+      "name": "split SHA256 recorded: train.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: val.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: test.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "split SHA256 recorded: class_info.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read class_info.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read validation_predictions.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read per_class_metrics.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read confusion_matrix_counts.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read history.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "exactly 50 class indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "class names are unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit class count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prediction row count",
+      "passed": true,
+      "detail": "actual=17771, expected=17771"
+    },
+    {
+      "name": "validation audit count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prediction paths are nonempty and unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "valid prediction indices: model_idx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "valid prediction indices: prediction_idx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "true class labels match indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "predicted labels match indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "saved correctness flags",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all validation classes represented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed validation accuracy",
+      "passed": true,
+      "detail": "recorded=0.7710314557425019; recomputed=0.7710314557425019"
+    },
+    {
+      "name": "recomputed validation macro_f1",
+      "passed": true,
+      "detail": "recorded=0.7283337911822862; recomputed=0.7283337911822862"
+    },
+    {
+      "name": "recomputed validation balanced_accuracy",
+      "passed": true,
+      "detail": "recorded=0.7166458809052354; recomputed=0.7166458809052354"
+    },
+    {
+      "name": "per-class row indices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "per-class names",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class precision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class recall",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed per-class support",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix row labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "confusion matrix column labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "recomputed full confusion matrix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "history epoch sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history train_balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite valid history val_balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "earliest maximum macro-F1 selected",
+      "passed": true,
+      "detail": "recorded=9; expected=9"
+    },
+    {
+      "name": "frozen validation matches selected epoch: loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training macro_f1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frozen validation matches selected epoch: balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finite frozen training balanced_accuracy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: learning_curves.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: confusion_matrix.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PNG format: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "positive image dimensions: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "readable image: validation_examples.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: checkpoints/best.pt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: checkpoints/last.pt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: report_facts.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: report.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "nonempty artifact: run.log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report contains finalized evidence",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "scope": "Saved-artifact consistency only; no checkpoint inference or test image evaluation."
+}

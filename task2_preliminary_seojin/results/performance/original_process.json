@@ -1,0 +1,21 @@
+{
+  "pid": 59516,
+  "launched_utc": "2026-10-19T14:03:35.837431+00:00",
+  "command": [
+    "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\.venv-project-runner\\Scripts\\python.exe",
+    "-u",
+    "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\task2_preliminary_seojin\\train_baseline.py",
+    "--device",
+    "cpu",
+    "--data-root",
+    "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\VMMRdb",
+    "--run-name",
+    "baseline_seed0",
+    "--threads",
+    "4",
+    "--workers",
+    "0"
+  ],
+  "output_dir": "C:\\Users\\hseoj\\OneDrive - Fraunhofer\\Desktop\\켄텍2 한서진\\학부\\4학년\\4-1 (2026 2학기)\\03_Introduction to AI\\Project 1\\intro_ai_project1\\task2_preliminary_seojin\\results\\baseline_seed0",
+  "note": "Check status.json and run.log for progress. Completion includes report.md and verification.json."
+}

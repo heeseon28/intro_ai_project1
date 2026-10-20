@@ -4,7 +4,7 @@ param(
     [string]$Python,
     [ValidateSet('auto', 'cuda', 'mps', 'cpu')][string]$Device = 'auto',
     [string]$RunName = 'baseline_seed0',
-    [int]$Threads = 4,
+    [int]$Threads = [math]::Min(16, [Environment]::ProcessorCount),
     [int]$Workers = 0,
     [switch]$Resume
 )

@@ -1,0 +1,30 @@
+{
+    "recorded_utc":  "2026-10-19T22:18:26.5855760+00:00",
+    "active_scheme":  "전원 구성표 GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)",
+    "ac_sleep_seconds_before":  300,
+    "dc_sleep_seconds_before":  180,
+    "state":  "verified",
+    "training_restarted":  false,
+    "before_query":  "전원 구성표 GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)\r\n  하위 그룹 GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (절전)\r\n    GUID 별칭: SUB_SLEEP\r\n    전원 설정 GUID: 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (다음 시간 후 절전 모드로 전환)\r\n      GUID 별칭: STANDBYIDLE\r\n      가능한 최소 설정: 0x00000000\r\n      가능한 최대 설정: 0xffffffff\r\n      가능한 설정 증가: 0x00000001\r\n      가능한 설정 단위: 초\r\n    현재 AC 전원 설정 색인: 0x0000012c\r\n    현재 DC 전원 설정 색인: 0x000000b4",
+    "error":  null,
+    "observed_modern_standby_kst":  [
+                                        {
+                                            "enter":  "2026-10-20T02:53:00+09:00",
+                                            "exit":  "2026-10-20T04:31:42+09:00",
+                                            "enter_reason":  "Idle Timeout",
+                                            "exit_reason":  "Input Mouse"
+                                        },
+                                        {
+                                            "enter":  "2026-10-20T04:33:00+09:00",
+                                            "exit":  "2026-10-20T07:10:52+09:00",
+                                            "enter_reason":  "Idle Timeout",
+                                            "exit_reason":  "Input Mouse"
+                                        }
+                                    ],
+    "evidence":  "Windows System event log, Microsoft-Windows-Kernel-Power events506/507",
+    "progress_viewer_tests_passed":  40,
+    "ac_sleep_seconds_after":  0,
+    "dc_sleep_seconds_after":  180,
+    "verified_utc":  "2026-10-19T22:19:47.4735991+00:00",
+    "after_query":  "전원 구성표 GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)\r\n  하위 그룹 GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (절전)\r\n    GUID 별칭: SUB_SLEEP\r\n    전원 설정 GUID: 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (다음 시간 후 절전 모드로 전환)\r\n      GUID 별칭: STANDBYIDLE\r\n      가능한 최소 설정: 0x00000000\r\n      가능한 최대 설정: 0xffffffff\r\n      가능한 설정 증가: 0x00000001\r\n      가능한 설정 단위: 초\r\n    현재 AC 전원 설정 색인: 0x00000000\r\n    현재 DC 전원 설정 색인: 0x000000b4"
+}

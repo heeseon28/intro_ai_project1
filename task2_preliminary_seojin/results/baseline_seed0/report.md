@@ -1,63 +1,67 @@
-# Task 2 예비 실험 보고서 — 결과 대기
+# Task 2 예비 실험 보고서
 
 작성자: 한서진 (팀 정보 추가 필요)
 
-> **완료된 학습·검증 결과가 확인되지 않아 수치 성능을 보고하지 않는다.**
+실행: `baseline_seed0` · 완료 epoch: 12 · 검증 macro-F1 최고 checkpoint: epoch 9
 
-대상 실행: `baseline_seed0`
+## 데이터와 기본 모델
 
-차단 사유: 필수 결과 미생성: metrics.json, history.csv, per_class_metrics.csv, confusion_matrix_counts.csv
+VMMRdb의 기존 50개 차종 분할을 사용하는 Task 2 기준선이다. CompCars는 이번 기준선 학습에 사용하지 않는다.
+원본 경로: `C:\Users\hseoj\OneDrive - Fraunhofer\Desktop\켄텍2 한서진\학부\4학년\4-1 (2026 2학기)\03_Introduction to AI\Project 1\VMMRdb`.
+분할 명세 표본 수: train 82,929, val 17,771, test 17,771; 클래스 50개. 테스트 성능은 측정하지 않았다.
+저장된 MD5 기준 분할 간 중복은 없으며, 근접 중복 검증 범위는 별도로 확인해야 한다.
 
-확인 기록: `C:\Users\hseoj\OneDrive - Fraunhofer\Desktop\켄텍2 한서진\학부\4학년\4-1 (2026 2학기)\03_Introduction to AI\Project 1\intro_ai_project1\task2_preliminary_seojin\results\baseline_seed0\status.json`
+구조: torchvision ResNet-18; 초기화: random, weights=None; RGB 224×224.
+전처리: deterministic square resize, ToTensor, Normalize {'mean': [0.5, 0.5, 0.5], 'std': [0.5, 0.5, 0.5]}.
+학습: Adam, lr=0.0003, unweighted CrossEntropyLoss, batch=64, epoch=12, seed=0.
+설정 기록: 전이학습=False, 증강=False, 재균형=False, 계층학습=False, 학습률 스케줄=False.
 
-```json
-{
-  "state": "running"
-}
-```
+## 학습·검증 결과
 
-확인 기록: `C:\Users\hseoj\OneDrive - Fraunhofer\Desktop\켄텍2 한서진\학부\4학년\4-1 (2026 2학기)\03_Introduction to AI\Project 1\intro_ai_project1\task2_preliminary_seojin\results\baseline_seed0\data_audit.json`
+검증 macro-F1으로 선택한 동일한 고정 checkpoint를 재평가한 수치이다.
 
-```json
-{
-  "split_sizes": {
-    "train": 82929,
-    "val": 17771,
-    "test": 17771
-  },
-  "test_images_opened": false
-}
-```
+| 분할 | Loss | Accuracy | Macro-F1 | Balanced accuracy |
+|---|---:|---:|---:|---:|
+| Train | 0.1697 | 94.08% | 0.9249 | 92.07% |
+| Validation | 0.9216 | 77.10% | 0.7283 | 71.66% |
 
-확인 기록: `C:\Users\hseoj\OneDrive - Fraunhofer\Desktop\켄텍2 한서진\학부\4학년\4-1 (2026 2학기)\03_Introduction to AI\Project 1\intro_ai_project1\task2_preliminary_seojin\results\preflight\status.json`
+동일 checkpoint의 train−val 정확도 차이는 +16.98%p, macro-F1 차이는 +19.65%p이며, val−train loss 차이는 +0.7519이다. 훈련 성능이 검증 성능보다 높아 일반화 차이가 관찰된다. 이 차이만으로 과적합의 원인을 확정할 수는 없다. 과소적합 여부는 훈련 성능과 loss의 수렴 추이를 함께 보고 판단해야 한다.
 
-```json
-{
-  "state": "ready",
-  "preflight_complete": true,
-  "ready_for_training": true,
-  "error_count": 0,
-  "warning_count": 0
-}
-```
+학습 곡선의 train 값은 가중치 업데이트 중 누적한 값이므로 위 고정 checkpoint 평가와 직접 일치하지 않을 수 있다.
 
-확인 기록: `C:\Users\hseoj\OneDrive - Fraunhofer\Desktop\켄텍2 한서진\학부\4학년\4-1 (2026 2학기)\03_Introduction to AI\Project 1\intro_ai_project1\task2_preliminary_seojin\results\preflight\data_audit.json`
+## 어려운 차종과 주요 혼동
 
-```json
-{
-  "ready_for_training": true,
-  "errors": [],
-  "warnings": [],
-  "split_sizes": {
-    "train": 82929,
-    "val": 17771,
-    "test": 17771
-  },
-  "test_images_opened": false,
-  "test_performance_measured": false
-}
-```
+검증 recall이 낮은 순서이며 동률에서는 F1, 차종명 순으로 정렬했다.
 
-동일 실행 폴더의 status.json이 complete이고 metrics.json의 complete가 true인 뒤 보고서를 다시 생성한다. 정식 결과는 smoke_test_only=false이고 설정한 모든 epoch를 마쳐야 한다.
+| 차종 | Recall | F1 | 검증 표본 |
+|---|---:|---:|---:|
+| gmc/sierra_1500 | 26.56% | 0.3342 | 241 |
+| dodge/ram_2500 | 27.42% | 0.3849 | 186 |
+| bmw/328i | 33.07% | 0.4375 | 127 |
+| volkswagen/golf | 39.44% | 0.5385 | 71 |
+| chevrolet/tahoe | 43.70% | 0.5431 | 389 |
+| bmw/530i | 44.07% | 0.5591 | 59 |
+| jeep/patriot | 47.50% | 0.5938 | 40 |
+| jeep/cherokee | 50.60% | 0.5657 | 166 |
+| dodge/charger | 54.76% | 0.6691 | 168 |
+| toyota/4runner | 55.67% | 0.7136 | 282 |
 
-필요한 근거 파일: `config.json`, `metrics.json`, `history.csv`, `per_class_metrics.csv`, `confusion_matrix_counts.csv`.
+검증 혼동 건수 상위 5개 방향(실제 → 예측):
+
+| 실제 차종 | 예측 차종 | 건수 | 실제 클래스 내 비율 |
+|---|---|---:|---:|
+| chevrolet/tahoe | gmc/yukon_1500 | 158 | 40.62% |
+| gmc/sierra_1500 | chevrolet/silverado | 88 | 36.51% |
+| dodge/ram_2500 | dodge/ram_1500 | 77 | 41.40% |
+| honda/accord | honda/civic | 70 | 7.24% |
+| toyota/corolla | toyota/camry | 52 | 9.45% |
+
+## 근거 그림과 다음 실험
+
+- [epoch별 학습·검증 곡선](learning_curves.png)
+- [검증 혼동 행렬(행 정규화)](confusion_matrix.png)
+- [검증 성공·실패 예시](validation_examples.png)
+
+혼동 쌍의 예시 이미지를 확인해 시점·배경·유사 외형의 영향을 검토한다. 이러한 원인은 혼동 횟수만으로 단정할 수 없다. 다음 실험은 동일한 분할과 기준 설정을 유지하고 하나의 개선 요소씩 비교한다. 단일 seed 결과로 통계적 유의성을 주장하지 않는다.
+
+재현 근거: [설정](config.json), [최종 지표](metrics.json), [학습 이력](history.csv), [클래스별 지표](per_class_metrics.csv), [혼동 건수](confusion_matrix_counts.csv).

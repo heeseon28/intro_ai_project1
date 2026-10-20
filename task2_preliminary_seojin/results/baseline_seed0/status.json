@@ -1,4 +1,5 @@
 {
-  "state": "running",
-  "smoke": false
+  "state": "complete",
+  "smoke": false,
+  "updated_utc": "2026-10-20T17:59:49.002389+00:00"
 }

@@ -43,7 +43,7 @@ def main():
     parser.add_argument('--device', choices=('auto', 'cuda', 'mps', 'cpu'), default='auto')
     parser.add_argument('--data-root', type=Path, default=HERE.parent.parent / 'VMMRdb')
     parser.add_argument('--run-name', default='baseline_seed0')
-    parser.add_argument('--threads', type=int, default=4)
+    parser.add_argument('--threads', type=int, default=min(16, os.cpu_count() or 1))
     parser.add_argument('--workers', type=int, default=0)
     parser.add_argument('--resume', action='store_true')
     args = parser.parse_args()

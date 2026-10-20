@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "smoke_test_only": false,
+  "selected_by": "maximum validation macro-F1",
+  "best_epoch": 9,
+  "epochs_completed": 12,
+  "train_at_best_checkpoint": {
+    "loss": 0.1696501506340515,
+    "accuracy": 0.9407927263080467,
+    "macro_f1": 0.9248674098748279,
+    "balanced_accuracy": 0.9207225307138622
+  },
+  "validation_at_best_checkpoint": {
+    "loss": 0.921559027503629,
+    "accuracy": 0.7710314557425019,
+    "macro_f1": 0.7283337911822862,
+    "balanced_accuracy": 0.7166458809052354
+  },
+  "test_evaluated": false
+}

@@ -1,0 +1,16 @@
+{
+  "requested_change": "Increase CPU threads after user requested higher utilization",
+  "recorded_utc": "2026-10-19T14:21:46.801300+00:00",
+  "previous_threads": 4,
+  "selected_threads": 16,
+  "workers": 0,
+  "benchmark": "cpu_benchmark.json",
+  "previous_completed_epochs": 0,
+  "restart_from_epoch": 1,
+  "previous_partial_epoch_replayed": true,
+  "training_source_sha256_unchanged": "6ab2295c86441e4ce54382cb8734b46b95af56360752e643b50caef404b3796a",
+  "training_hyperparameters_unchanged": true,
+  "original_process": "original_process.json",
+  "original_environment": "original_environment.json",
+  "original_log_retained": true
+}
