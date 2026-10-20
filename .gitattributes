@@ -1,0 +1,5 @@
+# Keep LF on every OS: train_baseline.py records SHA-256 of these files, and Windows CRLF
+# conversion made identical splits/code look different (see result_task2/baseline_seed0_Hyeonil_Cho).
+splits/*.csv text eol=lf
+task2/*.py text eol=lf
+task2/*.sh text eol=lf

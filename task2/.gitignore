@@ -1,1 +1,3 @@
 __pycache__/
+# LaTeX build output; the final PDF is copied to submission/ by make_submission.sh
+report/build/
