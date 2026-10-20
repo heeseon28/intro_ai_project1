@@ -1,0 +1,10 @@
+{
+  "python": "3.11.17 (main, Oct 14 2026, 01:04:22) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cpu",
+  "device": "cpu",
+  "gpu": null,
+  "workers": 2,
+  "data_root": "C:\\Users\\mgsam\\OneDrive\\바탕 화면\\코딩\\VMMRdb",
+  "git_revision": "3f51c4615840a5fa4bb0792a7f3fa17f58053cdb",
+  "started_utc": "2026-10-19T01:49:52.125562+00:00"
+}

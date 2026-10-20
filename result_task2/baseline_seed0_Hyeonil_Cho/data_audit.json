@@ -1,0 +1,12 @@
+{
+  "split_sizes": {
+    "train": 82929,
+    "val": 17771,
+    "test": 17771
+  },
+  "nclasses": 50,
+  "cross_split_stored_md5_overlap": false,
+  "train_hashes_verified": 16,
+  "test_images_opened": false,
+  "near_duplicates_checked": false
+}

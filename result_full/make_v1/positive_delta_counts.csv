@@ -1,0 +1,4 @@
+comparison,accuracy,macro_f1,balanced_accuracy,top3_accuracy,minority_make_fine_accuracy,cross_make_error_rate,within_make_error_rate
+hierarchy minus flat,0,0,1,2,0,1,3
+hierarchy_make_weighted minus flat,0,0,2,0,3,1,3
+hierarchy_make_weighted minus hierarchy,1,2,2,0,3,1,1
