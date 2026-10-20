@@ -2,6 +2,9 @@
 
 Task 2 제출용 독립 코드다. 기존 pilot_train.py / run_project.sh와 별도로 실행한다.
 
+> **최종 제출물:** `submission/Activity2_Submission.zip` (보고서 PDF, 이 코드, 분할 CSV, 두 실행 결과, 채점자용 영문 README).
+> 보고서 원본은 `report/`. 보고서나 결과를 바꿨으면 `bash task2/submission/make_submission.sh`로 PDF와 zip을 다시 만든다.
+
 ## 실험 조건
 
 - VMMRdb의 기존 50개 차종 분할을 그대로 사용한다. 분할 CSV를 다시 생성하지 않는다.
