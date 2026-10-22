@@ -1,0 +1,32 @@
+ .vscode/tasks.json                                 |    26 [32m+[m
+ task2_preliminary_seojin/README.md                 |    31 [32m+[m[31m-[m
+ task2_preliminary_seojin/benchmark_cpu.py          |   145 [32m+[m
+ task2_preliminary_seojin/launch_training.py        |     2 [32m+[m[31m-[m
+ task2_preliminary_seojin/monitor_training.py       |   248 [32m+[m
+ .../results/baseline_seed0/confusion_matrix.png    |   Bin [31m0[m -> [32m228069[m bytes
+ .../baseline_seed0/confusion_matrix_counts.csv     |    51 [32m+[m
+ .../results/baseline_seed0/difficult_classes.csv   |    11 [32m+[m
+ .../results/baseline_seed0/environment.json        |    21 [32m+[m[31m-[m
+ .../results/baseline_seed0/history.csv             |    13 [32m+[m
+ .../results/baseline_seed0/learning_curves.png     |   Bin [31m0[m -> [32m115592[m bytes
+ .../results/baseline_seed0/metrics.json            |    20 [32m+[m
+ .../results/baseline_seed0/per_class_metrics.csv   |    51 [32m+[m
+ .../results/baseline_seed0/process.json            |     9 [32m+[m[31m-[m
+ .../results/baseline_seed0/report.md               |   124 [32m+[m[31m-[m
+ .../results/baseline_seed0/report_facts.md         |    12 [32m+[m
+ .../results/baseline_seed0/run.log                 |   850 [32m+[m
+ .../results/baseline_seed0/status.json             |     5 [32m+[m[31m-[m
+ .../results/baseline_seed0/validation_examples.png |   Bin [31m0[m -> [32m1941174[m bytes
+ .../baseline_seed0/validation_predictions.csv      | 17772 [32m+++++++++++++++++++[m
+ .../results/baseline_seed0/verification.json       |   508 [32m+[m
+ .../results/performance/cpu_benchmark.json         |   106 [32m+[m
+ .../results/performance/original_environment.json  |    11 [32m+[m
+ .../results/performance/original_process.json      |    21 [32m+[m
+ .../results/performance/runtime_change.json        |    16 [32m+[m
+ .../results/performance/thermal_control.json       |    18 [32m+[m
+ .../verification/performance_diagnosis.json        |  1464 [32m++[m
+ .../results/verification/sleep_diagnosis.json      |    30 [32m+[m
+ task2_preliminary_seojin/run_task2.ps1             |     2 [32m+[m[31m-[m
+ .../tests/test_training_progress.py                |   412 [32m+[m
+ task2_preliminary_seojin/training_progress.py      |   370 [32m+[m
+ 31 files changed, 22271 insertions(+), 78 deletions(-)
