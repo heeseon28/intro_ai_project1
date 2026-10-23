@@ -1,0 +1,9 @@
+primary_category,all9_correct_control,all9_wrong
+suspected_label_error,0,113
+multiple_vehicles,0,0
+partial_vehicle,0,4
+occlusion,1,5
+low_resolution,3,7
+unusual_view,0,20
+sibling_or_trim_ambiguous,0,119
+other,96,53

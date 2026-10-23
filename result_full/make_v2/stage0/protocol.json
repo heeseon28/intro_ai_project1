@@ -1,0 +1,31 @@
+{
+  "stage": 0,
+  "training": false,
+  "test_read": false,
+  "val_n": 17771,
+  "train_n": 82929,
+  "all9_wrong": 321,
+  "controls": 100,
+  "control_definition": "correct in ALL 9 V1 runs; seed20261022 without replacement",
+  "hash": "64-bit horizontal dHash, grayscale PIL Lanczos 9x8, adjacent > comparison",
+  "hamming_radius": 4,
+  "duplicate_scope": "train vs validation only",
+  "duplicate_note": "hash candidates, not proof of identity; subset scores are a sensitivity analysis, not replacement official validation",
+  "oracle_note": "true make supplied diagnostically; never deployable performance",
+  "audit_categories": [
+    "suspected_label_error",
+    "multiple_vehicles",
+    "partial_vehicle",
+    "occlusion",
+    "low_resolution",
+    "unusual_view",
+    "sibling_or_trim_ambiguous",
+    "other"
+  ],
+  "source_sha256": "b3255e6c5bd4492d78634027d167d960b2a839db2572b87eae26b33e23940f1d",
+  "split_sha256": {
+    "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
+    "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b",
+    "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c"
+  }
+}

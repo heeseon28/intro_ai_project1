@@ -1,0 +1,37 @@
+{
+  "authorized_stages": [
+    0.5,
+    1,
+    2
+  ],
+  "test_allowed": false,
+  "selection_rule": "seed0 letterbox macro_f1 > V1 seed0 flat macro_f1",
+  "primary_metric": "validation macro_f1",
+  "reference_effect_threshold_pp": 0.2,
+  "required_improved_seeds": 3,
+  "models": [
+    "flat",
+    "hierarchy",
+    "hierarchy_make_weighted",
+    "flat_make_weighted"
+  ],
+  "sibling_pairs": [
+    [
+      "chevrolet/silverado",
+      "gmc/sierra_1500"
+    ],
+    [
+      "chevrolet/tahoe",
+      "gmc/yukon_1500"
+    ]
+  ],
+  "fixed_train_n": 82929,
+  "fixed_val_n": 17771,
+  "epochs": 30,
+  "patience": 5,
+  "batch_size": 64,
+  "workers": 2,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "test_read": false
+}

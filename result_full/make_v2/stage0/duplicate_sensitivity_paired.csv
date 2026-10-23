@@ -1,0 +1,5 @@
+subset,comparison,macro_f1_delta_pp,sd_delta_pp,improved_seeds
+excluding_dhash_candidates,hierarchy minus flat,-0.19938169779389625,0.18788861413424301,0
+excluding_dhash_candidates,hierarchy_make_weighted minus flat,-0.06025145934898527,0.05070914371548306,0
+full_validation,hierarchy minus flat,-0.18719567521661892,0.19863497965815297,0
+full_validation,hierarchy_make_weighted minus flat,-0.05447268400902298,0.03711740008860251,0

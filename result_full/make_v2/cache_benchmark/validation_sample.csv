@@ -1,0 +1,33 @@
+rel_path,md5,make_model,model_idx,make_idx,body_idx
+ford_explorer_2004/ford_explorer_2004_191.jpg,57682b80361371bbb5808565a21ba2af,ford/explorer,2,0,0
+ford_taurus_2001/00d0d_5l7EsMLzbk2_600x450.jpg,bb3007fdadd67ec0cf6fc27f792c336f,ford/taurus,3,0,4
+ford_focus_2011/2011 Ford Focus_00909_9y6g74gNDuM_600x450.jpg,2d66784b984d1bd7ed8bd7beb59ddd50,ford/focus,4,0,4
+chevrolet_silverado_2000/chevrolet_silverado_2000_55.jpg,0a15a963db030a3da701b98c3decf598,chevrolet/silverado,5,1,3
+chevrolet_corvette_1994/1994 Chevy corvette_00e0e_nnjMRJ92qJ_600x450.jpg,f21b513aa1baef934cd3305941132840,chevrolet/corvette,7,1,5
+chevrolet_corvette_1996/1996 Chevrolet Corvette_00R0R_jVFyNAfWDkb_600x450.jpg,8e6c4f41ca3f7472b5f19a8b92425671,chevrolet/corvette,7,1,5
+chevrolet_tahoe_2002/2002 Chevy Tahoe_00A0A_61JTIepmvVY_600x450.jpg,e637ecbb97455f370a47f958c3f4e184,chevrolet/tahoe,8,1,0
+chevrolet_tahoe_2010/chevrolet_tahoe_2010_8.jpg,af8951e816264deb61f0edd44e397e5b,chevrolet/tahoe,8,1,0
+toyota_camry_1992/00y0y_41Gk883FJkT_600x450.jpg,c12bbe7003ca5fe179a9e7b12694c294,toyota/camry,10,2,4
+toyota_camry_1999/toyota_camry_1999_68.jpg,cc76f1acb321586f53835a419c1719fe,toyota/camry,10,2,4
+toyota_corolla_1997/00Y0Y_8tudZoAa3Mi_600x450.jpg,885b0988d9f826a6a3c6f61317af840e,toyota/corolla,11,2,4
+honda_civic_1995/1995 civic sedan_00t0t_gbKMWgaAo1J_600x450.jpg,4bc1fa034d75729c789b20b1408bf5f1,honda/civic,15,3,4
+honda_civic_1996/honda_civic_1996_149.jpg,5d6185cbb587cf9653576ee7fac823e5,honda/civic,15,3,4
+honda_civic_1999/honda_civic_1999_185.jpg,f0bb16803f89fbec1553cf6e5299d671,honda/civic,15,3,4
+honda_civic_2002/2002 honda civic_00b0b_10YoXSpFdGS_600x450.jpg,ff0b7eebea62bccf8ed1d14d06b2fe07,honda/civic,15,3,4
+honda_civic_2002/2002 honda civic_00g0g_gCGfQIjuMUq_600x450.jpg,db2347a8300779a47b0a058ee31c97c9,honda/civic,15,3,4
+honda_civic_2011/2011 Honda Civic_00A0A_1WMH78OcJq6_600x450.jpg,744c26acd66a9ce1277f5de063a081b7,honda/civic,15,3,4
+honda_accord_2010/01010_i6eAlcmgOqm_600x450.jpg,ef93b18ca221b33533479d492fb88b23,honda/accord,16,3,4
+nissan_altima_1999/nissan_altima_1999_17.jpg,532d4daf17dd972a4ddbda9c44621762,nissan/altima,20,4,4
+nissan_altima_2003/nissan_altima_2003_239.jpg,d6b5cff978c3581167900b53e4d0e3f7,nissan/altima,20,4,4
+nissan_altima_2005/2005 nissan altima_01010_2M94WKM19Yh_600x450.jpg,2633bf6b7221abb2e4abb9fd51871161,nissan/altima,20,4,4
+nissan_quest_2005/nissan_quest_2005_20.jpg,3aacf7ce31694fabecf2fd0bce9762f0,nissan/quest,24,4,2
+dodge_grand caravan_2003/2003 dodge grand caravan_00e0e_gfm4QU9ypKE_600x450.jpg,425620d93dc9c1334965e49d3bc2c032,dodge/grand caravan,25,5,2
+dodge_durango_2000/dodge_durango_2000_126.jpg,7fdaa8ca0018a8a356d48cd5468f4020,dodge/durango,26,5,0
+dodge_ram_1500_2014/2014 dodge ram 1500_00E0E_3B1oYGZqgW8_600x450.jpg,32f807378932019baefceb0230c68c7a,dodge/ram_1500,27,5,3
+dodge_ram_2500_2001/dodge_2500_2001_8.jpg,110f5027e07822f4a0a13c881a30bc30,dodge/ram_2500,28,5,3
+dodge_charger_2010/2010 dodge charger_00N0N_laRBUXOA1aF_600x450.jpg,17570ea83d6c1c294a143d6b1927a088,dodge/charger,29,5,4
+jeep_grand_cherokee_2001/jeep_grandcherokee_2001_237.jpg,2907637b9baaced3956909bb74e157a7,jeep/grand_cherokee,35,7,0
+jeep_liberty_2010/jeep_liberty_2010_0.jpg,708ffc386d7032f957adfb5cf3b0d856,jeep/liberty,36,7,0
+jeep_wrangler_2005/2005 jeep wrangler_00P0P_iugHkNOCDeh_600x450.jpg,f1d34fb470d8ef1f64cba67afb7bb463,jeep/wrangler,37,7,0
+jeep_cherokee_1997/jeep_cherokee_1997_35.jpg,212a4848c174ff1169767bd6526c81a9,jeep/cherokee,38,7,0
+gmc_yukon_1500_2005/2005 GMC Yukon SLT_00909_diZyfQBpf4F_600x450.jpg,41d38c645b3f8cf6c741f620c3a596d7,gmc/yukon_1500,46,9,0

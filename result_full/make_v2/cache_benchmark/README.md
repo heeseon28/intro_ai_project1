@@ -1,0 +1,27 @@
+# Tensor cache benchmark
+{
+  "state": "complete",
+  "cache_selected": false,
+  "paired_speedups": [
+    0.7111280772254043,
+    0.7106727471053014,
+    0.643367509942961
+  ],
+  "median_speedup": 0.7106727471053014,
+  "sample_build_seconds": 2.9284515865147114,
+  "estimated_full_bytes": 60815756301,
+  "filesystem_free_bytes": 2178380247040,
+  "estimated_build_seconds": 542.0865344890284,
+  "estimated_train_epoch_saving_seconds": -140.6968539869267,
+  "augmented_input_exact_matches": 32,
+  "validation_input_exact_matches": 32,
+  "validation_prediction_exact_matches": 32,
+  "optimizer_steps": 0,
+  "test_read": false,
+  "workers": 2,
+  "batch_size": 64,
+  "torch_version": "2.8.0a0+5228986c39.nv25.05",
+  "decoder": "PIL 11.2.1",
+  "note": "End-to-end forward/backward benchmark, no optimizer step; warm OS cache after warmup. Filesystem free space is not a per-user quota guarantee. Full build stops safely on quota/write failure."
+}
+PIL transforms and augmentation RNG preserved. Cache stores lossless original RGB uint8, not augmented samples. GPU model remains in eval mode and receives no optimizer step. Cache selected only if every paired timing is >5% faster. No classification improvement is claimed.

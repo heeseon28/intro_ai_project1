@@ -1,5 +1,38 @@
 # 자동차 세부 차종 분류 (Intro to AI · Project 1)
 
+## 최신 결과와 폴더 안내 (2026-10-23)
+
+2차 실험은 0~2단계까지 완료했다. **검증 결과이며 테스트 평가는 아직 하지 않았다.**
+먼저 [2차 실험 결과 요약](reports/make_v2_results.md)을 읽고, 수치의 근거는 [전체 결과집](result_full/make_v2/README.md)에서 확인한다.
+[1차 실험 분석 노트북](04_results_analysis.ipynb)과 아래 기존 실험 계획은 1차 시점의 기록이다. 최신 진행 상태는 이 절과 [PROJECT_FLOW.md](PROJECT_FLOW.md)를 따른다.
+
+| 경로 | 용도 / 읽는 방법 | Git 보관 |
+|---|---|---|
+| [reports/](reports/README.md) | 팀원이 읽는 결과 해설. 2차 결과·가설 판정·한계·핵심 그림 | 문서 |
+| [result_full/make_v2/](result_full/make_v2/README.md) | 최신 검증 결과집. A/B/C 기존 9회 + D 신규 3회, 전처리 선별·진단 포함 | CSV·JSON·집계 그림·소스 |
+| [result_full/make_v2/stage0/](result_full/make_v2/stage0/README.md) | 정답 제조사 진단, 421장 사진 검토 기록, 근접 중복 후보와 민감도 분석 | 표·집계 그림, 원본 사진 제외 |
+| [result_full/make_v2/cache_benchmark/](result_full/make_v2/cache_benchmark/README.md) | uint8 캐시 입력 동일성·속도 측정. 이번 구현은 느려서 미채택 | 측정값·설명 |
+| [result_full/make_v1/](result_full/make_v1/) | 1차 본 실험 A/B/C × seed 0·1·2 결과집 | 기존 결과 보관 |
+| [result_task2/](result_task2/README.md) | Task 2 무작위 초기화 기준 CNN의 팀원별 결과 | 검증 결과·재현 정보 |
+| result_pilot/ | 12 epoch 예비 실험의 로컬 참고 결과. 본 실험 근거와 구분 | 이번 업로드 제외 |
+| [experiments/make_v2/](experiments/make_v2/README.md) | 2차 진단·전처리·캐시 측정·연속 실행·결과집 생성 소스 | 소스·실행 계획 |
+| full_train.py / pilot_train.py | 서버 본 학습 공통 구현 / 기존 예비 실행 구현. V2 실행 진입점은 experiments.make_v2.run_workflow | 소스 |
+| runs_full/make_v1/, runs_full/make_v2/ | 서버 학습 원본: 체크포인트·로그·중간 결과·검토용 사진. 삭제하지 않는다 | 전체 제외 |
+| runs_pilot/, runs_smoke/ | 예비 실행·구현 점검·GPU 잠금 등 로컬 작업 자료 | 제외 |
+| [task2/](task2/README.md) | Task 2 기준 학습 코드와 보고서·제출 패키지 폴더 | 기존 추적 자료, 임시 산출물 제외 |
+| [task2_preliminary_seojin/](task2_preliminary_seojin/) | 서진 팀원 기준 모델 실행·검증 보조 코드와 결과 | 기존 자료 |
+| [splits/](splits/) | 고정 train/val/test 목록과 클래스 정보. 분할을 다시 만들지 않는다 | CSV |
+| dataset/VMMRdb, dataset/COMPCAR | 원본 이미지 데이터. 현재 본 실험은 VMMRdb 사용 | 제외 |
+| [outputs/](outputs/) | 클래스 선정·이미지 인덱스·중복 제거 등에 쓴 메타데이터 | 추적 중인 CSV, automation 제외 |
+| [figures/](figures/) | Activity 1 데이터 분석·보고서용 그림 | 집계 그림 |
+| cache/, .venv-project-runner/, __pycache__/, .vscode/ | 캐시·서버 가상환경·Python 바이트코드·편집기 로컬 설정 | 제외 |
+| 01~03 노트북 | 데이터 분석 → 고정 분할 생성 → 학습·평가 도구 | 소스 노트북 |
+| [04_results_analysis.ipynb](04_results_analysis.ipynb) | 1차 결과 심층 분석. 2차 결과는 reports/ 문서를 볼 것 | 1차 분석 기록 |
+| [PROJECT_FLOW.md](PROJECT_FLOW.md) | 프로젝트 이력·실험 비교의 의미·파일 지도 | 팀원 안내 |
+
+결과집의 evidence/는 재계산용 예측·지표·학습 기록이고 sources/는 실행 당시 소스 사본이다. 체크포인트와 원본 이미지는 들어 있지 않다. CSV의 원 지표는 0~1, 문서의 성능은 %, 비교 차이는 %p다.
+
+
 VMMRdb 중고차 매물 사진으로 **50개 제조사-모델**을 분류하고, 기준 CNN의 실패를 분석해 개선하는 팀 프로젝트다.
 
 ```text

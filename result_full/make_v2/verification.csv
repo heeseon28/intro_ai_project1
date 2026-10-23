@@ -1,0 +1,13 @@
+seed,experiment,n,best_epoch,source,checks
+0,flat,17771,28,runs_full/make_v1/seed0/flat,"PASS: metrics, confusion, best epoch, split identity, model flags"
+0,hierarchy,17771,30,runs_full/make_v1/seed0/hierarchy,"PASS: metrics, confusion, best epoch, split identity, model flags"
+0,hierarchy_make_weighted,17771,30,runs_full/make_v1/seed0/hierarchy_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"
+0,flat_make_weighted,17771,26,runs_full/make_v2/seed0/flat_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"
+1,flat,17771,28,runs_full/make_v1/seed1/flat,"PASS: metrics, confusion, best epoch, split identity, model flags"
+1,hierarchy,17771,28,runs_full/make_v1/seed1/hierarchy,"PASS: metrics, confusion, best epoch, split identity, model flags"
+1,hierarchy_make_weighted,17771,30,runs_full/make_v1/seed1/hierarchy_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"
+1,flat_make_weighted,17771,29,runs_full/make_v2/seed1/flat_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"
+2,flat,17771,29,runs_full/make_v1/seed2/flat,"PASS: metrics, confusion, best epoch, split identity, model flags"
+2,hierarchy,17771,29,runs_full/make_v1/seed2/hierarchy,"PASS: metrics, confusion, best epoch, split identity, model flags"
+2,hierarchy_make_weighted,17771,27,runs_full/make_v1/seed2/hierarchy_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"
+2,flat_make_weighted,17771,29,runs_full/make_v2/seed2/flat_make_weighted,"PASS: metrics, confusion, best epoch, split identity, model flags"

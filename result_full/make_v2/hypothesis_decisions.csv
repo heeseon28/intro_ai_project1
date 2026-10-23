@@ -1,0 +1,6 @@
+comparison,mean_macro_f1_delta_pp,paired_sd_pp,improved_seeds,operational_effect,threshold_pp,note
+B-A hierarchy,-0.1871956752166115,0.1986349796581493,0,False,0.2,"operational consistency rule, not statistical significance"
+C-B weight in hierarchy,0.1327229912075826,0.23574090711643447,2,False,0.2,"operational consistency rule, not statistical significance"
+C-D hierarchy with weights,-0.037529261801627634,0.07192542792229915,1,False,0.2,"operational consistency rule, not statistical significance"
+D-A weight in flat,-0.016943422207401266,0.07619659984418056,2,False,0.2,"operational consistency rule, not statistical significance"
+V2 A-V1 A preprocessing,0.0,0.0,0,False,0.2,"operational consistency rule, not statistical significance"

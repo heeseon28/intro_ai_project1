@@ -1,0 +1,32 @@
+{
+  "seed": 1,
+  "experiment": "flat_make_weighted",
+  "hierarchical": false,
+  "weighted": true,
+  "preprocessing": "center",
+  "cache": false,
+  "epochs": 30,
+  "batch_size": 64,
+  "workers": 2,
+  "patience": 5,
+  "optimizer": "AdamW",
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "schedule": "cosine",
+  "selection": "best validation macro_f1",
+  "precision": "bf16",
+  "backbone": "ImageNet1K_V1 ResNet18",
+  "split_sha256": {
+    "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
+    "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b",
+    "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c"
+  },
+  "source_sha256": {
+    "full_train.py": "8bd847ea6af866ccaaedfe8e4a7bb5b0ee4300e7c38ba3e4cbbb542b9da0c63a",
+    "experiments/make_v2/preprocessing.py": "7d0c4e780bb23ba28b29060a1018fbad016155c4029ef508e26f34725b9c53e5",
+    "experiments/make_v2/tensor_cache.py": "b82fd4876d986a88b4b07132eaab642546788e545e0c86f7259d2b30e85d736b",
+    "experiments/make_v2/run_workflow.py": "d7dcc627dfe6ba2e41fcbe01120fd3ef0c7f3b6b4c71acbd154fd6542250d541"
+  },
+  "geometry": "V1 PIL RandomResizedCrop(.6,1)/Resize256 CenterCrop224",
+  "test_read": false
+}

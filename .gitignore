@@ -13,3 +13,12 @@ runs/**/*.pt
 /.venv-project-runner/
 
 /runs_pilot/
+
+# Server-only training artifacts; publish curated result_full instead
+/runs_full/
+/result_pilot/
+__pycache__/
+*.pyc
+/.vscode/
+/result_full/make_v2/smoke_verification.json
+/result_full/make_v2/implementation_checks.csv

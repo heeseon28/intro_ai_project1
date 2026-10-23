@@ -1,0 +1,32 @@
+pair_id,val_index,train_index,hamming_distance,same_label,sample_id,visual_verdict,visual_notes
+351,15606,76657,0,False,0,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+408,622,55359,1,False,1,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+617,9969,4015,3,False,2,different,Different vehicle/photo despite similar coarse grayscale hash.
+622,14591,15393,3,False,3,different,Different vehicle/photo despite similar coarse grayscale hash.
+626,17511,61880,3,False,4,different,Different vehicle/photo despite similar coarse grayscale hash.
+627,859,71129,4,False,5,different,Different vehicle/photo despite similar coarse grayscale hash.
+628,860,41903,4,False,6,different,Different vehicle/photo despite similar coarse grayscale hash.
+631,1668,24153,4,False,7,different,Different vehicle/photo despite similar coarse grayscale hash.
+642,7458,81616,4,False,8,different,Different vehicle/photo despite similar coarse grayscale hash.
+660,12063,57892,4,False,9,different,Different vehicle/photo despite similar coarse grayscale hash.
+666,15248,80711,4,False,10,different,Different vehicle/photo despite similar coarse grayscale hash.
+110,5446,25450,0,True,11,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+229,10234,47704,0,True,12,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+276,12003,55988,0,True,13,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+281,12100,56468,0,True,14,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+480,10573,49249,1,True,15,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+510,15378,71760,1,True,16,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+511,15629,72846,1,True,17,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+512,15699,73254,1,True,18,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+545,5450,25490,2,True,19,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+565,7901,36830,2,True,20,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+568,8468,39742,2,True,21,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+585,15523,72387,2,True,22,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+592,848,4031,3,True,23,different,Different vehicle/photo despite similar coarse grayscale hash.
+606,7892,36835,3,True,24,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+614,7945,37104,3,True,25,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+623,16022,74708,3,True,26,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+650,7899,36816,4,True,27,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+655,7944,37103,4,True,28,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+658,10188,47336,4,True,29,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."
+664,13702,63883,4,True,30,same_photo,"Same photographic scene; may differ in compression, resizing, small crop, or overlay. Not a file-byte identity check."

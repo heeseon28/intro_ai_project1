@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "selected_preprocessing": "center",
+  "rule": "strictly greater validation Macro-F1 on seed 0; exploratory screening, no multi-seed effect claim",
+  "old_macro_f1": 0.9211456922327025,
+  "new_macro_f1": 0.9201531931141678,
+  "delta_pp": -0.09924991185347176,
+  "source": "runs_full/make_v2/seed0/flat",
+  "cache_used": false
+}

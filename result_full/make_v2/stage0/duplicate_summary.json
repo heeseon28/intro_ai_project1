@@ -1,0 +1,23 @@
+{
+  "hash_radius": 4,
+  "pairs": 670,
+  "validation_images_with_candidate": 548,
+  "remaining_validation_n": 17223,
+  "cross_label_pairs": 11,
+  "distance_counts": {
+    "0": 408,
+    "1": 113,
+    "2": 71,
+    "3": 35,
+    "4": 43
+  },
+  "validation_landscape_fraction": 0.9317427269146362,
+  "validation_median_aspect_ratio": 1.336111111111111,
+  "validation_median_width_fraction_removed": 0.3450292397660819,
+  "visually_confirmed_duplicates": null,
+  "visual_sample_n": 31,
+  "visual_sample_same_photo_pairs": 21,
+  "visual_sample_different_pairs": 10,
+  "visual_sample_confirmed_distinct_val_images": 21,
+  "all_candidate_pairs_visually_reviewed": false
+}
