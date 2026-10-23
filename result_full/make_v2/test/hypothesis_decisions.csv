@@ -1,0 +1,5 @@
+comparison,mean_macro_f1_delta_pp,paired_sd_pp,improved_seeds,operational_effect,threshold_pp
+B-A hierarchy,-0.06873898077951839,0.2808871708360121,2,False,0.2
+C-B weight in hierarchy,-0.09325870375277064,0.3324997506809025,1,False,0.2
+C-D hierarchy with weights,-0.06823780954825868,0.1808098651331592,1,False,0.2
+D-A weight in flat,-0.09375987498403034,0.08621188095449321,0,False,0.2

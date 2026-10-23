@@ -1,7 +1,6 @@
-# 실험 결과 문서
+# 결과 문서 읽는 순서
 
-- [2차 실험 결과 정리](make_v2_results.md): 네 모델 비교, 전처리 선별, 진단과 한계.
-- [1차 결과집](../result_full/make_v1/): A/B/C × 3 seed 원자료.
-- [1차 분석 노트북](../04_results_analysis.ipynb): 1차 결과 심층 해석.
-
-모든 현재 성능 수치는 검증 세트 기준이다. 테스트 세트는 아직 평가하지 않았다.
+1. [최종 실험 종료 보고](final_results.md): 검증·테스트 성능, 가설 판정, 한계와 종료 상태.
+2. [2차 검증 해설](make_v2_results.md): 전처리 선별·데이터 진단·가중치 비교의 테스트 전 기록.
+3. [테스트 원자료](../result_full/make_v2/test/README.md)와 [검증 원자료](../result_full/make_v2/README.md).
+4. [1차 분석 노트북](../04_results_analysis.ipynb): 당시 분석과 가능한 설명.

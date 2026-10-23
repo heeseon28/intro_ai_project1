@@ -1,0 +1,29 @@
+comparison,metric,mean_delta_pp,paired_sd_pp,improved_seeds,n
+B-A hierarchy,accuracy,-0.2007015174535276,0.20299363019854327,0,3
+B-A hierarchy,macro_f1,-0.06873898077951839,0.2808871708360121,2,3
+B-A hierarchy,balanced_accuracy,-0.21287982548170806,0.29259277007418333,0,3
+B-A hierarchy,top3_accuracy,-0.07502860465552486,0.055516097713312625,0,3
+B-A hierarchy,minority_make_fine_accuracy,0.1534836459121854,0.12743670795326328,3,3
+B-A hierarchy,cross_make_error_rate,0.015005720931105087,0.05775253434749758,1,3
+B-A hierarchy,within_make_error_rate,0.1856957965224241,0.14630577907827363,0,3
+C-B weight in hierarchy,accuracy,-0.20820437791908564,0.2021860809546062,1,3
+C-B weight in hierarchy,macro_f1,-0.09325870375277064,0.3324997506809025,1,3
+C-B weight in hierarchy,balanced_accuracy,0.1950116950623119,0.48137423531864737,2,3
+C-B weight in hierarchy,top3_accuracy,-0.026260011629430924,0.09166088363341512,1,3
+C-B weight in hierarchy,minority_make_fine_accuracy,0.9419817817136855,0.5721596444509388,3,3
+C-B weight in hierarchy,cross_make_error_rate,0.14067863372910921,0.1962252633409791,0,3
+C-B weight in hierarchy,within_make_error_rate,0.06752574418997248,0.1513063942349756,2,3
+C-D hierarchy with weights,accuracy,-0.21195580815185724,0.059107351890117954,0,3
+C-D hierarchy with weights,macro_f1,-0.06823780954825868,0.1808098651331592,1,3
+C-D hierarchy with weights,balanced_accuracy,-0.023717734902658123,0.24978366581046862,1,3
+C-D hierarchy with weights,top3_accuracy,0.02063286628027165,0.10211886473330109,2,3
+C-D hierarchy with weights,minority_make_fine_accuracy,0.027779197643562625,0.2736076635198201,1,3
+C-D hierarchy with weights,cross_make_error_rate,-0.035638587211374306,0.14283789217261011,2,3
+C-D hierarchy with weights,within_make_error_rate,0.24759439536323224,0.08789882027918142,0,3
+D-A weight in flat,accuracy,-0.196950087220756,0.06489540596854519,0,3
+D-A weight in flat,macro_f1,-0.09375987498403034,0.08621188095449321,0,3
+D-A weight in flat,balanced_accuracy,0.005849604483261957,0.05750686888016255,2,3
+D-A weight in flat,top3_accuracy,-0.12192148256522743,0.06594412556504403,0,3
+D-A weight in flat,minority_make_fine_accuracy,1.0676862299823082,0.3290005815423286,3,3
+D-A weight in flat,cross_make_error_rate,0.1913229418715886,0.0439494101395907,0,3
+D-A weight in flat,within_make_error_rate,0.005627145349164364,0.025786819509064408,1,3

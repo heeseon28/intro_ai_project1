@@ -1,0 +1,13 @@
+seed,comparison,rescued,harmed,both_wrong,both_correct
+0,B-A hierarchy,369,370,646,16386
+0,D-A weight in flat,348,374,667,16382
+0,C-B weight in hierarchy,318,370,698,16385
+0,C-D hierarchy with weights,378,405,663,16325
+1,B-A hierarchy,301,374,656,16440
+1,D-A weight in flat,305,336,652,16478
+1,C-B weight in hierarchy,367,363,663,16378
+1,C-D hierarchy with weights,350,388,638,16395
+2,B-A hierarchy,346,379,625,16421
+2,D-A weight in flat,317,365,654,16435
+2,C-B weight in hierarchy,325,388,679,16379
+2,C-D hierarchy with weights,349,397,670,16355

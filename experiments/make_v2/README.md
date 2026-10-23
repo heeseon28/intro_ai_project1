@@ -13,3 +13,7 @@
 | ../../full_train.py | 공유 학습 루프. D는 flat+weighted 플래그로 분리 |
 
 서버 저장소 루트에서 가상환경 Python으로 `python -m experiments.make_v2.run_workflow`를 실행한다. 현재 이미 완료되어 있으므로 상태 확인 목적으로 다시 실행하지 않는다. 루트 full_train.py의 단독 main 대신 이 진입점을 쓴다. test를 읽지 않는 V2 train/val 경로다. 데이터는 dataset/VMMRdb, 기존 체크포인트는 runs_full/make_v1에 필요하다. 환경 의존성은 저장소 requirements.txt를 따른다. 결과 sources/ 사본은 실행 당시 코드다.
+
+## 최종 평가와 종료
+
+final_evaluate.py는 검증으로 고정한 체크포인트의 테스트 추론·검산을, finalize_project.py는 저장된 예측을 이용한 최종 문서·집계를 담당한다. 현재 둘 다 완료했다. [최종 보고](../../reports/final_results.md)를 읽는다. 이 절 이전의 “test를 읽지 않는 경로”는 0.5~2단계 run_workflow.py에만 해당한다.

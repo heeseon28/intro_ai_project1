@@ -1,0 +1,10 @@
+{
+  "old_sha256": "963455b85f1770b5f550e819d11a81dc579a22d110b2c6a9417352918ed9cb35",
+  "new_sha256": "2e5e284bc6cdff6eb40edfa2b8f93fe9e41b0ffa81d6650b0bf95a106f4f99f5",
+  "reason": "Remove invalid topk-first equals argmax assertion: tied scores can have different ordering. No change to model inference, preprocessing or metric definitions.",
+  "first_completed_run": "seed0/flat",
+  "first_prediction_sha256": "ac7529c5e8c51f03f207d58824031b4aca80f35ed4dc7fdb15637ba2ee90f19a",
+  "existing_predictions_reused": true,
+  "model_or_selection_changed": false,
+  "created_utc": "2026-10-23T04:49:12Z"
+}

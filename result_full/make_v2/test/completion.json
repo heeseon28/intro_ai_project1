@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "evaluated_runs": 12,
+  "test_n": 17771,
+  "no_training": true,
+  "selection_changed": false,
+  "selected_model": "flat",
+  "representative_seed": 0,
+  "completed_utc": "2026-10-23T04:55:36Z"
+}

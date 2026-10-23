@@ -1,5 +1,7 @@
 # 2차 실험 전체 결과집 (검증 세트)
 
+> 검증 결과 기록이다. 최종 테스트와 종료 판정은 [최종 보고](../../reports/final_results.md) 및 [테스트 결과집](test/README.md)을 본다. 아래 “test untouched” 문구는 테스트 이전 기록을 설명한다.
+
 [한국어 결과 해설](../../reports/make_v2_results.md) · [프로젝트 안내](../../README.md) · [0단계 진단](stage0/README.md)
 
 0~2단계 완료. A/B/C 9회는 make_v1 재사용, D 3회와 letterbox 선별 1회는 신규 실행이다. 최종 테스트는 미평가다. 성능 CSV는 0~1, 차이 표는 %p이며 모든 비교는 같은 seed를 짝지었다.

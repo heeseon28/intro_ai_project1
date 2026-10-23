@@ -1,0 +1,158 @@
+{
+  "frozen_before_test_rows_or_images_read": true,
+  "created_utc": "2026-10-23T04:43:37Z",
+  "git_commit": "e9b96a5489780c8f4cb2945b07a09004501e1d5c",
+  "config": {
+    "version": 1,
+    "selection": "A Flat fixed by validation model mean; representative A seed fixed by its validation Macro-F1 only",
+    "selected_model": "flat",
+    "representative_seed": 0,
+    "selected_checkpoint": "runs_full/make_v1/seed0/flat/best.pt",
+    "preprocessing": "Resize(256), CenterCrop(224), RGB, ToTensor, ImageNet normalize; no augmentation",
+    "batch_size": 64,
+    "workers": 2,
+    "precision": "bf16 autocast if supported, same as validation",
+    "primary_metric": "macro_f1",
+    "minority_metric": "unweighted mean of three manufacturer fine accuracies, NOT pooled image accuracy",
+    "minority_makes": [
+      "bmw",
+      "gmc",
+      "volkswagen"
+    ],
+    "decision_rule": "paired Macro-F1 >0 for 3/3 seeds and mean >0.2 percentage points; operational rule, not significance",
+    "reselection_after_test": false,
+    "extra_training": false,
+    "checkpoints": [
+      {
+        "seed": 0,
+        "experiment": "flat",
+        "checkpoint": "runs_full/make_v1/seed0/flat/best.pt",
+        "checkpoint_sha256": "d2ede266cbacdaa7adce029e1486d3aaccb3c17df695109122cb5e482c9525ac",
+        "best_epoch": 28,
+        "validation_macro_f1": 0.9211456922327025,
+        "hierarchical": false,
+        "weighted": false
+      },
+      {
+        "seed": 0,
+        "experiment": "hierarchy",
+        "checkpoint": "runs_full/make_v1/seed0/hierarchy/best.pt",
+        "checkpoint_sha256": "3b6874f05f002a5b98ace3defe48e1e1dbb409cd0e4b9e741fbf998d79d855fa",
+        "best_epoch": 30,
+        "validation_macro_f1": 0.9197931119589291,
+        "hierarchical": true,
+        "weighted": false
+      },
+      {
+        "seed": 0,
+        "experiment": "hierarchy_make_weighted",
+        "checkpoint": "runs_full/make_v1/seed0/hierarchy_make_weighted/best.pt",
+        "checkpoint_sha256": "3b62269bc742de9fb0d49180653892f75d7fc6964a3b8c697b99a7fc45641ec6",
+        "best_epoch": 30,
+        "validation_macro_f1": 0.92049264254532,
+        "hierarchical": true,
+        "weighted": true
+      },
+      {
+        "seed": 0,
+        "experiment": "flat_make_weighted",
+        "checkpoint": "runs_full/make_v2/seed0/flat_make_weighted/best.pt",
+        "checkpoint_sha256": "194950b2627c44de80fe0df9eff77bdfedaffac394e060078064c474a69f20ba",
+        "best_epoch": 26,
+        "validation_macro_f1": 0.920101526762532,
+        "hierarchical": false,
+        "weighted": true
+      },
+      {
+        "seed": 1,
+        "experiment": "flat",
+        "checkpoint": "runs_full/make_v1/seed1/flat/best.pt",
+        "checkpoint_sha256": "a4518d383891866739169764d419bbd30219906f311a4abcad912cca4ebc0c68",
+        "best_epoch": 28,
+        "validation_macro_f1": 0.9194162324698713,
+        "hierarchical": false,
+        "weighted": false
+      },
+      {
+        "seed": 1,
+        "experiment": "hierarchy",
+        "checkpoint": "runs_full/make_v1/seed1/hierarchy/best.pt",
+        "checkpoint_sha256": "291e540992dc89a14324bedc07d638334ed2e4b90aa32ba5208917290efabe5c",
+        "best_epoch": 28,
+        "validation_macro_f1": 0.9192193410983913,
+        "hierarchical": true,
+        "weighted": false
+      },
+      {
+        "seed": 1,
+        "experiment": "hierarchy_make_weighted",
+        "checkpoint": "runs_full/make_v1/seed1/hierarchy_make_weighted/best.pt",
+        "checkpoint_sha256": "d4ab0b2c22a575b69ba0e45cab51ac8814fd573bb6bfe9a375df5404314fdd1d",
+        "best_epoch": 30,
+        "validation_macro_f1": 0.9185665434542307,
+        "hierarchical": true,
+        "weighted": true
+      },
+      {
+        "seed": 1,
+        "experiment": "flat_make_weighted",
+        "checkpoint": "runs_full/make_v2/seed1/flat_make_weighted/best.pt",
+        "checkpoint_sha256": "ee9ed9dc06a148ce2cd3fd118e143f34c6606fc29cda9459cfec4300acbda2ae",
+        "best_epoch": 29,
+        "validation_macro_f1": 0.9196021509735667,
+        "hierarchical": false,
+        "weighted": true
+      },
+      {
+        "seed": 2,
+        "experiment": "flat",
+        "checkpoint": "runs_full/make_v1/seed2/flat/best.pt",
+        "checkpoint_sha256": "9c9b143b0e15f5b2e273c6634c3ba22dd9a9fd4f5cc3091df545977c7cc01532",
+        "best_epoch": 29,
+        "validation_macro_f1": 0.9199396143392967,
+        "hierarchical": false,
+        "weighted": false
+      },
+      {
+        "seed": 2,
+        "experiment": "hierarchy",
+        "checkpoint": "runs_full/make_v1/seed2/hierarchy/best.pt",
+        "checkpoint_sha256": "7411100eeadbdeee58cd5c406f34f8966b9e3afe651fab368dde824129b7c2ed",
+        "best_epoch": 29,
+        "validation_macro_f1": 0.9158732157280517,
+        "hierarchical": true,
+        "weighted": false
+      },
+      {
+        "seed": 2,
+        "experiment": "hierarchy_make_weighted",
+        "checkpoint": "runs_full/make_v1/seed2/hierarchy_make_weighted/best.pt",
+        "checkpoint_sha256": "9f56aad609ab0eb62f17d486dee5d594abf72be023c5b4bb1d695400e04aec1a",
+        "best_epoch": 27,
+        "validation_macro_f1": 0.9198081725220488,
+        "hierarchical": true,
+        "weighted": true
+      },
+      {
+        "seed": 2,
+        "experiment": "flat_make_weighted",
+        "checkpoint": "runs_full/make_v2/seed2/flat_make_weighted/best.pt",
+        "checkpoint_sha256": "2541625c2b2fc06d951458b2346748afeeea7abad5507138642c606c340b8b59",
+        "best_epoch": 29,
+        "validation_macro_f1": 0.9202895586395498,
+        "hierarchical": false,
+        "weighted": true
+      }
+    ],
+    "split_sha256": {
+      "train.csv": "aa06009a4feaffe5c8d92f0b52eb2c9aa70b8be5c6dd16c1bd3bb8befbc5edfe",
+      "val.csv": "89c1e962480ceae026acbd49eca587e810ff770043a1c3cb087e0528b6a8778b",
+      "test.csv": "91b55d4bf14dfb6d11cb355e1c765db3cf7fab0c5b8fd67e2da4c716ed38dd55",
+      "class_info.csv": "b7e2e25898d9ffea679820722d87f5cd3c54b364bba90334797055a431ca4f1c"
+    },
+    "source_sha256": {
+      "full_train.py": "8bd847ea6af866ccaaedfe8e4a7bb5b0ee4300e7c38ba3e4cbbb542b9da0c63a",
+      "experiments/make_v2/final_evaluate.py": "963455b85f1770b5f550e819d11a81dc579a22d110b2c6a9417352918ed9cb35"
+    }
+  }
+}

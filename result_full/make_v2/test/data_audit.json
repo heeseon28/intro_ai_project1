@@ -1,0 +1,9 @@
+{
+  "train_n": 82929,
+  "val_n": 17771,
+  "test_n": 17771,
+  "path_md5_disjoint": true,
+  "labels_consistent": true,
+  "near_duplicate_test_audit": false,
+  "labels_modified": false
+}

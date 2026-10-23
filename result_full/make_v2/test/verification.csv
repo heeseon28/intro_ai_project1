@@ -1,0 +1,13 @@
+seed,experiment,n,checkpoint_sha256,topk_first_vs_argmax_disagreements,verification
+0,flat,17771,d2ede266cbacdaa7adce029e1486d3aaccb3c17df695109122cb5e482c9525ac,10,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+0,hierarchy,17771,3b6874f05f002a5b98ace3defe48e1e1dbb409cd0e4b9e741fbf998d79d855fa,2,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+0,hierarchy_make_weighted,17771,3b62269bc742de9fb0d49180653892f75d7fc6964a3b8c697b99a7fc45641ec6,4,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+0,flat_make_weighted,17771,194950b2627c44de80fe0df9eff77bdfedaffac394e060078064c474a69f20ba,5,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+1,flat,17771,a4518d383891866739169764d419bbd30219906f311a4abcad912cca4ebc0c68,10,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+1,hierarchy,17771,291e540992dc89a14324bedc07d638334ed2e4b90aa32ba5208917290efabe5c,0,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+1,hierarchy_make_weighted,17771,d4ab0b2c22a575b69ba0e45cab51ac8814fd573bb6bfe9a375df5404314fdd1d,1,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+1,flat_make_weighted,17771,ee9ed9dc06a148ce2cd3fd118e143f34c6606fc29cda9459cfec4300acbda2ae,5,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+2,flat,17771,9c9b143b0e15f5b2e273c6634c3ba22dd9a9fd4f5cc3091df545977c7cc01532,6,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+2,hierarchy,17771,7411100eeadbdeee58cd5c406f34f8966b9e3afe651fab368dde824129b7c2ed,2,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+2,hierarchy_make_weighted,17771,9f56aad609ab0eb62f17d486dee5d594abf72be023c5b4bb1d695400e04aec1a,1,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
+2,flat_make_weighted,17771,2541625c2b2fc06d951458b2346748afeeea7abad5507138642c606c340b8b59,5,PASS independent metrics/confusion/labels/decomposition; topk tie order not forced
